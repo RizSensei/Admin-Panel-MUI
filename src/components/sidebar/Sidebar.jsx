@@ -38,10 +38,10 @@ const Sidebar = () => {
         </Box>
       </Box>
       <Box sx={{mt:2}}>
-        <AccordianItem icon={HomeIcon} title="Dashboard" contentArray={['Dashboard1','Dashboard2']}/>
-        <AccordianItem icon={GroupsIcon} title="Teams" contentArray={['Team1','Team2']}/>
-        <AccordianItem icon={FolderIcon} title="Projects" contentArray={['Project1','Project2']}/>
-        <AccordianItem icon={EmailIcon} title="Email" contentArray={['Email1','Email2']}/>
+        <AccordianItem icon={HomeIcon} title="Dashboard" route="/"/>
+        <AccordianItem icon={GroupsIcon} title="Teams" route="/team"/>
+        <AccordianItem icon={FolderIcon} title="Projects" />
+        <AccordianItem icon={EmailIcon} title="Email"/>
       </Box>
     </Box>
   );

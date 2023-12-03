@@ -13,7 +13,9 @@ const Layout = ({children}) => {
       <Sidebar/>
       <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
         <Topbar/>
-        <Box style={{backgroundColor:theme.palette.secondary.main , height:'100%'}} sx={{ p:3 }}>{children}</Box>
+        <Box style={{backgroundColor:theme.palette.secondary.main , height:'100%',
+            overflowY: 'auto', 
+            flex: 1}} sx={{ p:3 }}>{children}</Box>
       </Box>
     </Box>
     </>

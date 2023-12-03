@@ -2,6 +2,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 
+
 const Box2 = () => {
   return (
     <Box sx={{ width: "100%" }}>
