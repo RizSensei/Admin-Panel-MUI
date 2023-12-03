@@ -1,0 +1,3 @@
+cd React-BIY\AdminPanel-MUI\public\json
+
+json-server --watch api.json
