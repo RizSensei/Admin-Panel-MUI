@@ -1,386 +1,385 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "name": "Project Alpha",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "startDate": "2023-01-01",
-            "endDate": "2023-06-30",
-            "status": "In Progress",
-            "team": ["John Doe", "Jane Smith", "Bob Johnson"],
-            "budget": 50000
-          },
-          {
-            "id": 2,
-            "name": "Project Beta",
-            "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "startDate": "2023-02-15",
-            "endDate": "2023-08-31",
-            "status": "Completed",
-            "team": ["Alice Brown", "Charlie Green"],
-            "budget": 75000
-          },
-          {
-            "id": 3,
-            "name": "Project Omega",
-            "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "startDate": "2023-09-10",
-            "endDate": "2023-12-15",
-            "status": "Planned",
-            "team": ["Eve White", "David Black"],
-            "budget": 100000
-          },
-          {
-            "id": 4,
-            "name": "Project Gamma",
-            "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-            "startDate": "2023-03-20",
-            "endDate": "2023-09-15",
-            "status": "In Progress",
-            "team": ["Frank Red", "Grace Yellow"],
-            "budget": 60000
-          },
-          {
-            "id": 5,
-            "name": "Project Delta",
-            "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "startDate": "2023-04-05",
-            "endDate": "2023-10-31",
-            "status": "Planned",
-            "team": ["Henry Blue", "Ivy Purple"],
-            "budget": 80000
-          },
-          {
-            "id": 6,
-            "name": "Project Kappa",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "startDate": "2023-11-15",
-            "endDate": "2024-05-31",
-            "status": "In Progress",
-            "team": ["Oliver Gray", "Penelope Orange"],
-            "budget": 90000
-          },
-          {
-            "id": 7,
-            "name": "Project Epsilon",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-            "startDate": "2023-05-10",
-            "endDate": "2023-11-30",
-            "status": "Planned",
-            "team": ["Quincy Silver", "Rose Gold"],
-            "budget": 70000
-          },
-          {
-            "id": 8,
-            "name": "Project Zeta",
-            "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-            "startDate": "2023-06-01",
-            "endDate": "2023-12-20",
-            "status": "In Progress",
-            "team": ["Samuel Brown", "Sophia Green"],
-            "budget": 85000
-          },
-          {
-            "id": 9,
-            "name": "Project Eta",
-            "description": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-            "startDate": "2023-07-15",
-            "endDate": "2024-01-31",
-            "status": "Completed",
-            "team": ["Thomas Black", "Tiffany White"],
-            "budget": 95000
-          },
-          {
-            "id": 10,
-            "name": "Project Theta",
-            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-            "startDate": "2023-08-01",
-            "endDate": "2024-02-28",
-            "status": "Planned",
-            "team": ["Ulysses Yellow", "Ursula Purple"],
-            "budget": 110000
-          }
-    ],
-    "teams":[
-            {
-              "id": 1,
-              "name": "John Doe",
-              "role": "Developer",
-              "experience": "5 years",
-              "department": "Engineering",
-              "email": "john.doe@example.com"
-            },
-            {
-              "id": 2,
-              "name": "Jane Smith",
-              "role": "Designer",
-              "experience": "3 years",
-              "department": "Design",
-              "email": "jane.smith@example.com"
-            },
-            {
-              "id": 3,
-              "name": "Bob Johnson",
-              "role": "Project Manager",
-              "experience": "7 years",
-              "department": "Management",
-              "email": "bob.johnson@example.com"
-            },
-            {
-              "id": 4,
-              "name": "Alice Brown",
-              "role": "Frontend Developer",
-              "experience": "4 years",
-              "department": "Engineering",
-              "email": "alice.brown@example.com"
-            },
-            {
-              "id": 5,
-              "name": "Charlie Green",
-              "role": "UI/UX Designer",
-              "experience": "6 years",
-              "department": "Design",
-              "email": "charlie.green@example.com"
-            },
-            {
-              "id": 6,
-              "name": "Eve White",
-              "role": "Backend Developer",
-              "experience": "5 years",
-              "department": "Engineering",
-              "email": "eve.white@example.com"
-            },
-            {
-              "id": 7,
-              "name": "David Black",
-              "role": "Database Administrator",
-              "experience": "8 years",
-              "department": "Engineering",
-              "email": "david.black@example.com"
-            },
-            {
-              "id": 8,
-              "name": "Frank Red",
-              "role": "Software Engineer",
-              "experience": "6 years",
-              "department": "Engineering",
-              "email": "frank.red@example.com"
-            },
-            {
-              "id": 9,
-              "name": "Yellow Grace",
-              "role": "QA Tester",
-              "experience": "3 years",
-              "department": "Quality Assurance",
-              "email": "yellow.grace@example.com"
-            },
-            {
-              "id": 10,
-              "name": "Henry Blue",
-              "role": "System Analyst",
-              "experience": "7 years",
-              "department": "Engineering",
-              "email": "henry.blue@example.com"
-            },
-            {
-              "id": 11,
-              "name": "Ivy Purple",
-              "role": "Frontend Developer",
-              "experience": "4 years",
-              "department": "Engineering",
-              "email": "ivy.purple@example.com"
-            },
-            {
-              "id": 12,
-              "name": "Oliver Gray",
-              "role": "Full Stack Developer",
-              "experience": "6 years",
-              "department": "Engineering",
-              "email": "oliver.gray@example.com"
-            },
-            {
-              "id": 13,
-              "name": "Penelope Orange",
-              "role": "Graphic Designer",
-              "experience": "5 years",
-              "department": "Design",
-              "email": "penelope.orange@example.com"
-            },
-            {
-              "id": 14,
-              "name": "Quincy Silver",
-              "role": "Backend Developer",
-              "experience": "4 years",
-              "department": "Engineering",
-              "email": "quincy.silver@example.com"
-            },
-            {
-              "id": 15,
-              "name": "Rose Gold",
-              "role": "UI/UX Designer",
-              "experience": "5 years",
-              "department": "Design",
-              "email": "rose.gold@example.com"
-            },
-            {
-              "id": 16,
-              "name": "Samuel Brown",
-              "role": "Frontend Developer",
-              "experience": "5 years",
-              "department": "Engineering",
-              "email": "samuel.brown@example.com"
-            },
-            {
-              "id": 17,
-              "name": "Sophia Green",
-              "role": "UI/UX Designer",
-              "experience": "6 years",
-              "department": "Design",
-              "email": "sophia.green@example.com"
-            },
-            {
-              "id": 18,
-              "name": "Thomas Black",
-              "role": "Project Manager",
-              "experience": "8 years",
-              "department": "Management",
-              "email": "thomas.black@example.com"
-            },
-            {
-              "id": 19,
-              "name": "Tiffany White",
-              "role": "QA Tester",
-              "experience": "3 years",
-              "department": "Quality Assurance",
-              "email": "tiffany.white@example.com"
-            },
-            {
-              "id": 20,
-              "name": "Ulysses Yellow",
-              "role": "Backend Developer",
-              "experience": "6 years",
-              "department": "Engineering",
-              "email": "ulysses.yellow@example.com"
-            },
-            {
-              "id": 21,
-              "name": "Ursula Purple",
-              "role": "UI/UX Designer",
-              "experience": "5 years",
-              "department": "Design",
-              "email": "ursula.purple@example.com"
-            }
-    ],
-    "clients":[
-        {
-            "id": 1,
-            "name": "ABC Company",
-            "contactPerson": "John Doe",
-            "email": "john.doe@abccompany.com",
-            "phone": "+1 (555) 123-4567",
-            "industry": "Technology",
-            "status": "Prospective",
-            "lastContactDate": "2023-01-10",
-            "notes": "Interested in our software solutions."
-          },
-          {
-            "id": 2,
-            "name": "XYZ Corporation",
-            "contactPerson": "Jane Smith",
-            "email": "jane.smith@xyzcorp.com",
-            "phone": "+1 (555) 987-6543",
-            "industry": "Finance",
-            "status": "Lead",
-            "lastContactDate": "2023-02-15",
-            "notes": "Discussed upcoming financial software needs."
-          },
-          {
-            "id": 3,
-            "name": "123 Industries",
-            "contactPerson": "Bob Johnson",
-            "email": "bob.johnson@123industries.com",
-            "phone": "+1 (555) 456-7890",
-            "industry": "Manufacturing",
-            "status": "Prospective",
-            "lastContactDate": "2023-03-20",
-            "notes": "Requesting a proposal for customized manufacturing software."
-          },
-          {
-            "id": 4,
-            "name": "Epic Enterprises",
-            "contactPerson": "Alice Brown",
-            "email": "alice.brown@epicenterprises.com",
-            "phone": "+1 (555) 789-0123",
-            "industry": "Healthcare",
-            "status": "Lead",
-            "lastContactDate": "2023-04-25",
-            "notes": "Interested in a demonstration of our healthcare solutions."
-          },
-          {
-            "id": 5,
-            "name": "Innovate Innovations",
-            "contactPerson": "Charlie Green",
-            "email": "charlie.green@innovateinnovations.com",
-            "phone": "+1 (555) 111-2222",
-            "industry": "Research and Development",
-            "status": "Prospective",
-            "lastContactDate": "2023-05-15",
-            "notes": "Exploring collaboration on innovative research projects."
-          },
-          {
-            "id": 6,
-            "name": "Global Retail Solutions",
-            "contactPerson": "Eve White",
-            "email": "eve.white@globalretailsolutions.com",
-            "phone": "+1 (555) 333-4444",
-            "industry": "Retail",
-            "status": "Lead",
-            "lastContactDate": "2023-06-20",
-            "notes": "Interested in upgrading their retail management system."
-          },
-          {
-            "id": 7,
-            "name": "Tech Innovators Inc.",
-            "contactPerson": "David Black",
-            "email": "david.black@techinnovators.com",
-            "phone": "+1 (555) 555-6666",
-            "industry": "Technology",
-            "status": "Prospective",
-            "lastContactDate": "2023-07-25",
-            "notes": "Discussing partnership opportunities for tech innovations."
-          },
-          {
-            "id": 8,
-            "name": "Green Energy Solutions",
-            "contactPerson": "Frank Red",
-            "email": "frank.red@greenenergy.com",
-            "phone": "+1 (555) 777-8888",
-            "industry": "Energy",
-            "status": "Lead",
-            "lastContactDate": "2023-08-30",
-            "notes": "Exploring sustainable energy solutions for their operations."
-          },
-          {
-            "id": 9,
-            "name": "HealthFirst Hospitals",
-            "contactPerson": "Yellow Grace",
-            "email": "yellow.grace@healthfirst.com",
-            "phone": "+1 (555) 999-0000",
-            "industry": "Healthcare",
-            "status": "Prospective",
-            "lastContactDate": "2023-09-15",
-            "notes": "Discussing customized healthcare IT solutions."
-          },
-          {
-            "id": 10,
-            "name": "Global Logistics Group",
-            "contactPerson": "Henry Blue",
-            "email": "henry.blue@globallogistics.com",
-            "phone": "+1 (555) 123-9876",
-            "industry": "Logistics",
-            "status": "Lead",
-            "lastContactDate": "2023-10-20",
-            "notes": "Interested in optimizing their logistics management system."
-          }
-    ]
-  }
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project Alpha",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-30",
+      "status": "In Progress",
+      "team": [
+        "John Doe",
+        "Jane Smith",
+        "Bob Johnson"
+      ],
+      "budget": 50000
+    },
+    {
+      "id": 2,
+      "name": "Project Beta",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "startDate": "2023-02-15",
+      "endDate": "2023-08-31",
+      "status": "Completed",
+      "team": [
+        "Alice Brown",
+        "Charlie Green"
+      ],
+      "budget": 75000
+    },
+    {
+      "id": 3,
+      "name": "Project Omega",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "startDate": "2023-09-10",
+      "endDate": "2023-12-15",
+      "status": "Planned",
+      "team": [
+        "Eve White",
+        "David Black"
+      ],
+      "budget": 100000
+    },
+    {
+      "id": 4,
+      "name": "Project Gamma",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "startDate": "2023-03-20",
+      "endDate": "2023-09-15",
+      "status": "In Progress",
+      "team": [
+        "Frank Red",
+        "Grace Yellow"
+      ],
+      "budget": 60000
+    },
+    {
+      "id": 5,
+      "name": "Project Delta",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "startDate": "2023-04-05",
+      "endDate": "2023-10-31",
+      "status": "Planned",
+      "team": [
+        "Henry Blue",
+        "Ivy Purple"
+      ],
+      "budget": 80000
+    },
+    {
+      "id": 6,
+      "name": "Project Kappa",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "startDate": "2023-11-15",
+      "endDate": "2024-05-31",
+      "status": "In Progress",
+      "team": [
+        "Oliver Gray",
+        "Penelope Orange"
+      ],
+      "budget": 90000
+    },
+    {
+      "id": 7,
+      "name": "Project Epsilon",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      "startDate": "2023-05-10",
+      "endDate": "2023-11-30",
+      "status": "Planned",
+      "team": [
+        "Quincy Silver",
+        "Rose Gold"
+      ],
+      "budget": 70000
+    },
+    {
+      "id": 8,
+      "name": "Project Zeta",
+      "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+      "startDate": "2023-06-01",
+      "endDate": "2023-12-20",
+      "status": "In Progress",
+      "team": [
+        "Samuel Brown",
+        "Sophia Green"
+      ],
+      "budget": 85000
+    },
+    {
+      "id": 9,
+      "name": "Project Eta",
+      "description": "Sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      "startDate": "2023-07-15",
+      "endDate": "2024-01-31",
+      "status": "Completed",
+      "team": [
+        "Thomas Black",
+        "Tiffany White"
+      ],
+      "budget": 95000
+    },
+    {
+      "id": 10,
+      "name": "Project Theta",
+      "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+      "startDate": "2023-08-01",
+      "endDate": "2024-02-28",
+      "status": "Planned",
+      "team": [
+        "Ulysses Yellow",
+        "Ursula Purple"
+      ],
+      "budget": 110000
+    }
+  ],
+  "teams": [
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "role": "Designer",
+      "experience": "3",
+      "department": "Design",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "role": "Project Manager",
+      "experience": "7",
+      "department": "Management",
+      "email": "bob.johnson@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "role": "Frontend Developer",
+      "experience": "4",
+      "department": "Engineering",
+      "email": "alice.brown@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Charlie Green",
+      "role": "UI/UX Designer",
+      "experience": "6",
+      "department": "Design",
+      "email": "charlie.green@example.com"
+    },
+    {
+      "id": 6,
+      "name": "Eve White",
+      "role": "Backend Developer",
+      "experience": "5",
+      "department": "Engineering",
+      "email": "eve.white@example.com"
+    },
+    {
+      "id": 7,
+      "name": "David Black",
+      "role": "Database Administrator",
+      "experience": "8",
+      "department": "Engineering",
+      "email": "david.black@example.com"
+    },
+    {
+      "id": 8,
+      "name": "Frank Red",
+      "role": "Software Engineer",
+      "experience": "6",
+      "department": "Engineering",
+      "email": "frank.red@example.com"
+    },
+    {
+      "id": 9,
+      "name": "Yellow Grace",
+      "role": "QA Tester",
+      "experience": "3",
+      "department": "Quality Assurance",
+      "email": "yellow.grace@example.com"
+    },
+    {
+      "id": 10,
+      "name": "Henry Blue",
+      "role": "System Analyst",
+      "experience": "7",
+      "department": "Engineering",
+      "email": "henry.blue@example.com"
+    },
+    {
+      "id": 11,
+      "name": "Ivy Purple",
+      "role": "Frontend Developer",
+      "experience": "4",
+      "department": "Engineering",
+      "email": "ivy.purple@example.com"
+    },
+    {
+      "id": 12,
+      "name": "Oliver Gray",
+      "role": "Full Stack Developer",
+      "experience": "6",
+      "department": "Engineering",
+      "email": "oliver.gray@example.com"
+    },
+    {
+      "id": 13,
+      "name": "Penelope Orange",
+      "role": "Graphic Designer",
+      "experience": "5",
+      "department": "Design",
+      "email": "penelope.orange@example.com"
+    },
+    {
+      "id": 14,
+      "name": "Quincy Silver",
+      "role": "Backend Developer",
+      "experience": "4",
+      "department": "Engineering",
+      "email": "quincy.silver@example.com"
+    },
+    {
+      "id": 15,
+      "name": "Rose Gold",
+      "role": "UI/UX Designer",
+      "experience": "5",
+      "department": "Design",
+      "email": "rose.gold@example.com"
+    },
+    {
+      "id": 16,
+      "name": "Samuel Brown",
+      "role": "Frontend Developer",
+      "experience": "5",
+      "department": "Engineering",
+      "email": "samuel.brown@example.com"
+    },
+    {
+      "id": 17,
+      "name": "Sophia Green",
+      "role": "UI/UX Designer",
+      "experience": "6",
+      "department": "Design",
+      "email": "sophia.green@example.com"
+    },
+    {
+      "name": "Enel Dimario",
+      "role": "Backend Developer",
+      "experience": "2",
+      "department": "Engineering",
+      "email": "enel.dimario@gmail.com",
+      "id": 18
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "ABC Company",
+      "contactPerson": "John Doe",
+      "email": "john.doe@abccompany.com",
+      "phone": "+1 (555) 123-4567",
+      "industry": "Technology",
+      "status": "Prospective",
+      "lastContactDate": "2023-01-10",
+      "notes": "Interested in our software solutions."
+    },
+    {
+      "id": 2,
+      "name": "XYZ Corporation",
+      "contactPerson": "Jane Smith",
+      "email": "jane.smith@xyzcorp.com",
+      "phone": "+1 (555) 987-6543",
+      "industry": "Finance",
+      "status": "Lead",
+      "lastContactDate": "2023-02-15",
+      "notes": "Discussed upcoming financial software needs."
+    },
+    {
+      "id": 3,
+      "name": "123 Industries",
+      "contactPerson": "Bob Johnson",
+      "email": "bob.johnson@123industries.com",
+      "phone": "+1 (555) 456-7890",
+      "industry": "Manufacturing",
+      "status": "Prospective",
+      "lastContactDate": "2023-03-20",
+      "notes": "Requesting a proposal for customized manufacturing software."
+    },
+    {
+      "id": 4,
+      "name": "Epic Enterprises",
+      "contactPerson": "Alice Brown",
+      "email": "alice.brown@epicenterprises.com",
+      "phone": "+1 (555) 789-0123",
+      "industry": "Healthcare",
+      "status": "Lead",
+      "lastContactDate": "2023-04-25",
+      "notes": "Interested in a demonstration of our healthcare solutions."
+    },
+    {
+      "id": 5,
+      "name": "Innovate Innovations",
+      "contactPerson": "Charlie Green",
+      "email": "charlie.green@innovateinnovations.com",
+      "phone": "+1 (555) 111-2222",
+      "industry": "Research and Development",
+      "status": "Prospective",
+      "lastContactDate": "2023-05-15",
+      "notes": "Exploring collaboration on innovative research projects."
+    },
+    {
+      "id": 6,
+      "name": "Global Retail Solutions",
+      "contactPerson": "Eve White",
+      "email": "eve.white@globalretailsolutions.com",
+      "phone": "+1 (555) 333-4444",
+      "industry": "Retail",
+      "status": "Lead",
+      "lastContactDate": "2023-06-20",
+      "notes": "Interested in upgrading their retail management system."
+    },
+    {
+      "id": 7,
+      "name": "Tech Innovators Inc.",
+      "contactPerson": "David Black",
+      "email": "david.black@techinnovators.com",
+      "phone": "+1 (555) 555-6666",
+      "industry": "Technology",
+      "status": "Prospective",
+      "lastContactDate": "2023-07-25",
+      "notes": "Discussing partnership opportunities for tech innovations."
+    },
+    {
+      "id": 8,
+      "name": "Green Energy Solutions",
+      "contactPerson": "Frank Red",
+      "email": "frank.red@greenenergy.com",
+      "phone": "+1 (555) 777-8888",
+      "industry": "Energy",
+      "status": "Lead",
+      "lastContactDate": "2023-08-30",
+      "notes": "Exploring sustainable energy solutions for their operations."
+    },
+    {
+      "id": 9,
+      "name": "HealthFirst Hospitals",
+      "contactPerson": "Yellow Grace",
+      "email": "yellow.grace@healthfirst.com",
+      "phone": "+1 (555) 999-0000",
+      "industry": "Healthcare",
+      "status": "Prospective",
+      "lastContactDate": "2023-09-15",
+      "notes": "Discussing customized healthcare IT solutions."
+    },
+    {
+      "id": 10,
+      "name": "Global Logistics Group",
+      "contactPerson": "Henry Blue",
+      "email": "henry.blue@globallogistics.com",
+      "phone": "+1 (555) 123-9876",
+      "industry": "Logistics",
+      "status": "Lead",
+      "lastContactDate": "2023-10-20",
+      "notes": "Interested in optimizing their logistics management system."
+    }
+  ]
+}

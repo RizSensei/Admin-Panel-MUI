@@ -1,25 +1,42 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import Sidebar from "../components/sidebar/Sidebar"
-import Topbar from "../components/topbar/Topbar"
+import React, { useState } from "react";
+import { Box } from "@mui/material";
+import Sidebar from "../components/sidebar/Sidebar";
+import Topbar from "../components/topbar/Topbar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import { useTheme } from '@mui/system';
+import { useTheme } from "@mui/system";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const theme = useTheme();
+
+  const [sidebarToggleValue, setSidebarToggleValue] = useState(false);
+
   return (
     <>
-    <Box sx={{ height:'100vh',width:'100vw', display:'flex'}}>
-      <Sidebar/>
-      <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
-        <Topbar/>
-        <Box style={{backgroundColor:theme.palette.secondary.main , height:'100%',
-            overflowY: 'auto', 
-            flex: 1}} sx={{ p:3 }}>{children}</Box>
+    <ToastContainer/>
+      <Box sx={{ height: "100vh", width: "100vw", display: "flex" }}>
+        <Sidebar sidebarToggleValue={sidebarToggleValue} />
+        <Box sx={{ width: "100%", display: "flex", flexDirection: "column" }}>
+          <Topbar
+            sidebarToggleValue={sidebarToggleValue}
+            setSidebarToggleValue={setSidebarToggleValue}
+          />
+          <Box
+            style={{
+              backgroundColor: theme.palette.secondary.main,
+              height: "100%",
+              overflowY: "auto",
+              flex: 1,
+            }}
+            sx={{ p: 3 }}
+          >
+            {children}
+          </Box>
+        </Box>
       </Box>
-    </Box>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

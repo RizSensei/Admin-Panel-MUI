@@ -3,6 +3,7 @@ import Layout from "../../layout/Layout";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Box1 from "./components/Box1";
 import Box2 from "./components/Box2";
+import ProjectStatistics from "./components/ProjectStatistics";
 
 const Dashboard = () => {
   return (
@@ -15,7 +16,7 @@ const Dashboard = () => {
           <Box2/>
         </Grid>
         <Grid item xs={6}>
-          <Box>3</Box>
+          {/* <ProjectStatistics/> */}
         </Grid>
         <Grid item xs={6}>
           <Box>4</Box>

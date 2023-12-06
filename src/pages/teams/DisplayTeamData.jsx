@@ -1,16 +1,14 @@
 import React from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
-import Layout from "../../layout/Layout";
 
-import CircularProgress from "@mui/material/CircularProgress";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+
 import {
   Avatar,
-  Box,
-  FormControl,
-  MenuItem,
+  IconButton,
   Paper,
-  Select,
   Table,
   TableBody,
   TableCell,
@@ -18,7 +16,10 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import SearchAutoComplete from "../../components/topbar/searchAutoComplete/SearchAutoComplete";
+
+import IsLoading from "../../components/useQuery/IsLoading";
+import Error from "../../components/useQuery/Error";
+import DeleteTeammateButton from "../../components/deleteTeammateButton/DeleteTeammateButton";
 
 const retrieveTeams = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -34,54 +35,11 @@ const DisplayTeamData = () => {
     isLoading,
   } = useQuery("teamsData", retrieveTeams);
 
-  if (isLoading)
-    return (
-      <Layout>
-        <Box
-          sx={{
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <CircularProgress />
-        </Box>
-      </Layout>
-    );
-  if (error) return <Layout>An error occurred: {error.message}</Layout>;
+  if (isLoading) return <IsLoading />;
+
+  if (error) return <Error error={error} />;
 
   return (
-    <Layout>
-      <Box
-        component={Paper}
-        sx={{ display: "flex", justifyContent: "space-between", mb: 1, p: 2 }}
-      >
-        <SearchAutoComplete />
-        <Box sx={{ display: "flex", columnGap: 2 }}>
-          <FormControl sx={{ minWidth: { xs: 250 } }}>
-            <Select size="small" label="Role">
-              <MenuItem value={0}>Sort by Default</MenuItem>
-              <MenuItem value={1}>Sort by popularity</MenuItem>
-              <MenuItem value={2}>Sort by average rating</MenuItem>
-              <MenuItem value={3}>Sort by newness</MenuItem>
-              <MenuItem value={4}>Sort by price: low to high</MenuItem>
-              <MenuItem value={5}>Sort by price: high to low</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl sx={{ minWidth: { xs: 250 } }}>
-            <Select size="small" label="Department">
-              <MenuItem value={0}>Sort by Default</MenuItem>
-              <MenuItem value={1}>Sort by popularity</MenuItem>
-              <MenuItem value={2}>Sort by average rating</MenuItem>
-              <MenuItem value={3}>Sort by newness</MenuItem>
-              <MenuItem value={4}>Sort by price: low to high</MenuItem>
-              <MenuItem value={5}>Sort by price: high to low</MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
-      </Box>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -103,7 +61,7 @@ const DisplayTeamData = () => {
                 align="right"
                 sx={{ fontWeight: "600", color: "gray" }}
               >
-                Experience
+                Experience(yrs)
               </TableCell>
               <TableCell
                 align="right"
@@ -117,10 +75,16 @@ const DisplayTeamData = () => {
               >
                 Email
               </TableCell>
+              <TableCell
+                align="right"
+                sx={{ fontWeight: "600", color: "gray" }}
+              >
+                Action
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {teams.map((team, index) => (
+            {teams?.map((team, index) => (
               <TableRow
                 key={index}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -133,12 +97,20 @@ const DisplayTeamData = () => {
                 <TableCell align="right">{team.experience}</TableCell>
                 <TableCell align="right">{team.department}</TableCell>
                 <TableCell align="right">{team.email}</TableCell>
+                <TableCell align="right">
+                  <IconButton>
+                    <EditIcon sx={{ color: "purple" }} />
+                  </IconButton>
+                  {/* <IconButton>
+                    <DeleteIcon sx={{ color: "red" }} />
+                  </IconButton> */}
+                  <DeleteTeammateButton id={team.id}/>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-    </Layout>
   );
 };
 

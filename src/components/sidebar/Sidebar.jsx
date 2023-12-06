@@ -1,15 +1,46 @@
 import { Avatar, Box, Button, Typography } from "@mui/material";
 import React from "react";
-import AccordianItem from "../accordian/AccordianItem";
+import SidebarButton from "../sidebarButton/SidebarButton";
 
 import HomeIcon from "@mui/icons-material/Home";
-import GroupsIcon from '@mui/icons-material/Groups';
-import FolderIcon from '@mui/icons-material/Folder';
+import GroupsIcon from "@mui/icons-material/Groups";
+import FolderIcon from "@mui/icons-material/Folder";
 import EmailIcon from "@mui/icons-material/Email";
 
-const Sidebar = () => {
+const Sidebar = ({ sidebarToggleValue }) => {
+  const sideBarMenu = [
+    {
+      title: "Dashboard",
+      icon: HomeIcon,
+      route: '/'
+    },
+    {
+      title: "Teams",
+      icon: GroupsIcon,
+      route: '/team'
+    },
+    {
+      title: "Projects",
+      icon: FolderIcon,
+      route: '/project'
+    },
+    {
+      title: "Email",
+      icon: EmailIcon,
+      // route: '/email'
+    },
+  ];
+
   return (
-    <Box sx={{ width: "250px", height: "100%", bgcolor: "primary.main" }}>
+    <Box
+      sx={{
+        width: sidebarToggleValue ? "70px" : "250px",
+        height: "100%",
+        bgcolor: "primary.main",
+        transition: "width 0.3s ease-in-out",
+        cursor: "pointer",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -37,11 +68,10 @@ const Sidebar = () => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{mt:2}}>
-        <AccordianItem icon={HomeIcon} title="Dashboard" route="/"/>
-        <AccordianItem icon={GroupsIcon} title="Teams" route="/team"/>
-        <AccordianItem icon={FolderIcon} title="Projects" />
-        <AccordianItem icon={EmailIcon} title="Email"/>
+      <Box sx={{ mt: 2, display: "flex", flexDirection: "column" }}>
+        {sideBarMenu.map((item) => (
+          <SidebarButton icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggleValue} />
+        ))}
       </Box>
     </Box>
   );
