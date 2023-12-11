@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import Layout from '../../layout/Layout'
-import { Box, FormControl, InputLabel, MenuItem, Paper, Select } from '@mui/material'
+import { Box, Button, FormControl, InputLabel, MenuItem, Paper, Select } from '@mui/material'
 import SearchAutoComplete from '../../components/topbar/searchAutoComplete/SearchAutoComplete'
 import DisplayProjects from './DisplayProjects'
 import axios from 'axios'
+import SelectMapping from '../../components/mapping/SelectMapping'
 
 const Project = () => {
     const status = ["All","Completed","Planned","In Progress"];
+    const budget = ["<50K","50K-100K",">100K"];
 
     const [ projectStatus, setProjectStatus ] = useState("");
     const handleProjectStatusChange = (value) => {
@@ -38,21 +40,11 @@ const Project = () => {
         
         
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          <FormControl sx={{ minWidth: { xs: 250 } }}>
-          <InputLabel>Status</InputLabel>
-            <Select size="small" label="Status" onChange={(e) => handleProjectStatusChange(e.target.value)}>
-              {status?.map((status, index) => (
-                <MenuItem value={status} key={index} selected={status === "All"}>{status}</MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-          {/* <FormControl sx={{ minWidth: { xs: 250 } }}>
-            <Select size="small" label="Department">
-              {departments?.map((department, index) => (
-                <MenuItem value={index} key={index}>{department}</MenuItem>
-              ))}
-            </Select>
-          </FormControl> */}
+          <SelectMapping label="Status" content={status} />
+          <SelectMapping label="Budget" content={budget} />
+          <Button variant="contained" size="small">
+            Filter
+          </Button>
         </Box>
       </Box>
       <DisplayProjects retrieveProjects={retrieveProjects}/>

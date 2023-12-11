@@ -12,6 +12,7 @@ const ProjectStatistics = () => {
   } = useQuery(["projectsRepo"], () =>
     axios.get("http://localhost:3000/projects").then((res) => res.data)
   );
+  // console.log(Projects)
 
   const [status, setStatus] = useState({
     completed: 0,
@@ -37,6 +38,7 @@ const ProjectStatistics = () => {
       inProgress: inProgress,
     });
   }, []);
+  // console.log(status)
 
   const options = {
     chart: {

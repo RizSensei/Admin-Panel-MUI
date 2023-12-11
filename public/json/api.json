@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Project Alpha",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet, consectetur adipiscing elit.",
       "startDate": "2023-01-01",
       "endDate": "2023-06-30",
       "status": "In Progress",
@@ -12,7 +12,8 @@
         "Jane Smith",
         "Bob Johnson"
       ],
-      "budget": 50000
+      "budget": 50000,
+      "image": "https://i.pinimg.com/564x/be/42/08/be42084cb85b82902734d2672bfd0974.jpg"
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
         "Alice Brown",
         "Charlie Green"
       ],
-      "budget": 75000
+      "budget": 75000,
+      "image": "https://i.pinimg.com/564x/0a/dd/5b/0add5bc4d839e293b369df3fdacc32ca.jpg"
     },
     {
       "id": 3,
@@ -38,7 +40,8 @@
         "Eve White",
         "David Black"
       ],
-      "budget": 100000
+      "budget": 100000,
+      "image": "https://i.pinimg.com/564x/97/48/44/974844904c4868a7e7e8e01c79e2cce4.jpg"
     },
     {
       "id": 4,
@@ -51,7 +54,8 @@
         "Frank Red",
         "Grace Yellow"
       ],
-      "budget": 60000
+      "budget": 60000,
+      "image": "https://i.pinimg.com/564x/ee/c6/8e/eec68e04077e3e5119d04b140601cbf1.jpg"
     },
     {
       "id": 5,
@@ -64,7 +68,8 @@
         "Henry Blue",
         "Ivy Purple"
       ],
-      "budget": 80000
+      "budget": 80000,
+      "image": "https://i.pinimg.com/564x/7a/28/f9/7a28f91a34529c902213e9d4fce87485.jpg"
     },
     {
       "id": 6,
@@ -77,7 +82,8 @@
         "Oliver Gray",
         "Penelope Orange"
       ],
-      "budget": 90000
+      "budget": 90000,
+      "image": "https://i.pinimg.com/564x/c9/32/d3/c932d3d5fcf0a497ffb76b19173d72aa.jpg"
     },
     {
       "id": 7,
@@ -90,7 +96,8 @@
         "Quincy Silver",
         "Rose Gold"
       ],
-      "budget": 70000
+      "budget": 70000,
+      "image": "https://i.pinimg.com/564x/d4/c0/df/d4c0df55f7d4da93cf322d5a8f767355.jpg"
     },
     {
       "id": 8,
@@ -103,7 +110,8 @@
         "Samuel Brown",
         "Sophia Green"
       ],
-      "budget": 85000
+      "budget": 85000,
+      "image": "https://i.pinimg.com/564x/9c/82/3b/9c823bb3fb0c0aeb8ef59fbab1c9d551.jpg"
     },
     {
       "id": 9,
@@ -116,7 +124,8 @@
         "Thomas Black",
         "Tiffany White"
       ],
-      "budget": 95000
+      "budget": 95000,
+      "image": "https://i.pinimg.com/564x/6f/f4/9b/6ff49b8af1a441a88d2ae6658d27b229.jpg"
     },
     {
       "id": 10,
@@ -129,7 +138,8 @@
         "Ulysses Yellow",
         "Ursula Purple"
       ],
-      "budget": 110000
+      "budget": 110000,
+      "image": "https://i.pinimg.com/564x/0c/d7/78/0cd778911275562a2009ce77d5f15d2e.jpg"
     }
   ],
   "teams": [

@@ -5,7 +5,7 @@ import { useMutation, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-const DeleteTeammateButton = ({ id }) => {
+const DeleteTeammateButton = ({ id, name }) => {
   const client = useQueryClient();
 
   const mutation = useMutation(
@@ -14,7 +14,7 @@ const DeleteTeammateButton = ({ id }) => {
       onSuccess: () => {
         client.invalidateQueries(["teamsData"]);
 
-        return toast.success(`Teammate with id:${id} deleted`);
+        return toast.success(`${name} is removed from Team`);
       },
       onError: () => {
         return toast.error("Something went wrong!!!");

@@ -47,7 +47,7 @@ const DisplayProjects = ({retrieveProjects}) => {
             <CardMedia
               component="img"
               height="140"
-              image="https://i.pinimg.com/564x/be/42/08/be42084cb85b82902734d2672bfd0974.jpg"
+              image={project.image}
               alt="project image"
             />
             <CardContent>

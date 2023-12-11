@@ -20,6 +20,7 @@ import {
 import IsLoading from "../../components/useQuery/IsLoading";
 import Error from "../../components/useQuery/Error";
 import DeleteTeammateButton from "../../components/deleteTeammateButton/DeleteTeammateButton";
+import UpdateTeam from "../../components/modal/UpdateTeam";
 
 const retrieveTeams = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -44,6 +45,7 @@ const DisplayTeamData = () => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
+              <TableCell>S.No</TableCell>
               <TableCell>Avatar</TableCell>
               <TableCell
                 align="right"
@@ -89,6 +91,7 @@ const DisplayTeamData = () => {
                 key={index}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
+                <TableCell>{index+1}</TableCell>
                 <TableCell component="th" scope="row">
                   <Avatar>{team.name.substring(0, 1)}</Avatar>
                 </TableCell>
@@ -97,14 +100,9 @@ const DisplayTeamData = () => {
                 <TableCell align="right">{team.experience}</TableCell>
                 <TableCell align="right">{team.department}</TableCell>
                 <TableCell align="right">{team.email}</TableCell>
-                <TableCell align="right">
-                  <IconButton>
-                    <EditIcon sx={{ color: "purple" }} />
-                  </IconButton>
-                  {/* <IconButton>
-                    <DeleteIcon sx={{ color: "red" }} />
-                  </IconButton> */}
-                  <DeleteTeammateButton id={team.id}/>
+                <TableCell align="right" sx={{display:'flex'}}>
+                  <UpdateTeam/>
+                  <DeleteTeammateButton name={team.name} id={team.id}/>
                 </TableCell>
               </TableRow>
             ))}

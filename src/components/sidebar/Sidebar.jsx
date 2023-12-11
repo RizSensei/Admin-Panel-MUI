@@ -6,6 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import GroupsIcon from "@mui/icons-material/Groups";
 import FolderIcon from "@mui/icons-material/Folder";
 import EmailIcon from "@mui/icons-material/Email";
+import PersonIcon from '@mui/icons-material/Person';
 
 const Sidebar = ({ sidebarToggleValue }) => {
   const sideBarMenu = [
@@ -22,7 +23,12 @@ const Sidebar = ({ sidebarToggleValue }) => {
     {
       title: "Projects",
       icon: FolderIcon,
-      route: '/project'
+      route: '/projects'
+    },
+    {
+      title: "Clients",
+      icon: PersonIcon,
+      route: '/clients'
     },
     {
       title: "Email",
@@ -69,8 +75,8 @@ const Sidebar = ({ sidebarToggleValue }) => {
         </Box>
       </Box>
       <Box sx={{ mt: 2, display: "flex", flexDirection: "column" }}>
-        {sideBarMenu.map((item) => (
-          <SidebarButton icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggleValue} />
+        {sideBarMenu.map((item,index) => (
+          <SidebarButton key={index} icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggleValue} />
         ))}
       </Box>
     </Box>

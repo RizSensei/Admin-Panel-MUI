@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
               overflowY: "auto",
               flex: 1,
             }}
-            sx={{ p: 3 }}
+            sx={{ p: 2 }}
           >
             {children}
           </Box>
