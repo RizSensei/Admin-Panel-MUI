@@ -16,7 +16,7 @@ const SearchAutoComplete = () => {
   };
 
   return (
-    <div style={{ width: 200 }}>
+    <div style={{ width: 200, marginRight:"10px" }}>
       <ReactSearchAutocomplete formatResult={formatResult} placeholder="Search here"/>
     </div>
   );

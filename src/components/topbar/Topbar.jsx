@@ -1,39 +1,37 @@
 import {
-  AppBar,
-  Avatar,
   Box,
   Button,
-  IconButton,
-  Stack,
-  Toolbar,
+  Switch,
   Typography,
 } from "@mui/material";
-import React from "react";
-
+import React, { useContext } from "react";
+import "../../App.css"
 import MenuIcon from "@mui/icons-material/Menu";
-import NightlightIcon from "@mui/icons-material/Nightlight";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SearchAutoComplete from "./searchAutoComplete/SearchAutoComplete";
 import IconStack from "./icon-stack/IconStack";
 import ProfileMenu from "./profile-menu/ProfileMenu";
+import { DarkModeContext } from "../../context/DarkModeProvider";
+
 
 const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
-
   const performSidebarToggle = () => {
     setSidebarToggleValue(!sidebarToggleValue);
-    
   };
+
+  const { dashtheme, toggleTheme } = useContext(DarkModeContext);
 
   return (
     <Box
       position="static"
       sx={{
-        bgcolor: "secondary.main",
-        color: "black",
+        // bgcolor: "secondary.main",
+        bgcolor: "var(--bg-navbar)",
+        color: "var(--text-primary)",
         px: 3,
         borderBottom: "1px solid gray",
       }}
+      className={`App ${dashtheme}`}
     >
       <Box
         sx={{
@@ -44,9 +42,11 @@ const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Button onClick={() => performSidebarToggle()}>
-            {
-              sidebarToggleValue ? <ArrowForwardIcon fontSize="large" /> : <MenuIcon fontSize="large" />
-            }
+            {sidebarToggleValue ? (
+              <ArrowForwardIcon fontSize="large" />
+            ) : (
+              <MenuIcon fontSize="large" />
+            )}
           </Button>
           <Typography sx={{ fontWeight: 600, fontSize: "20px" }}>
             Dashboard
@@ -54,9 +54,7 @@ const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <SearchAutoComplete />
-          <Button>
-            <NightlightIcon fontSize="small" />
-          </Button>
+          <Switch onChange={() => toggleTheme()}/>
           <IconStack />
           <Button>
             <ProfileMenu />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import DisplayTeamData from "./DisplayTeamData";
 import {
   Box,
@@ -13,6 +13,7 @@ import Layout from "../../layout/Layout";
 import AddTeam from "../../components/modal/AddTeam";
 import SelectMapping from "../../components/mapping/SelectMapping";
 import Search from "../../components/search/Search";
+import { DarkModeContext } from "../../context/DarkModeProvider";
 
 const Team = () => {
   const departments = [
@@ -33,11 +34,14 @@ const Team = () => {
     "Full Stack Developer",
   ];
   const experience=[];
+
+  const { dashtheme, toggleTheme } = useContext(DarkModeContext);
   return (
     <Layout>
       <Box
         component={Paper}
-        sx={{ display: "flex", justifyContent: "space-between", mb: 1, p: 2 }}
+        sx={{ display: "flex", justifyContent: "space-between", mb: 1, p: 2, color:"red" }}
+        className={`App ${dashtheme}`}
       >
         <Box sx={{ display: "flex", columnGap: 2 }}>
           <AddTeam />

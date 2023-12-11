@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import { Box } from "@mui/material";
+import React, { useContext, useState } from "react";
+import { Box, createTheme } from "@mui/material";
 import Sidebar from "../components/sidebar/Sidebar";
 import Topbar from "../components/topbar/Topbar";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { useTheme } from "@mui/system";
+import { DarkModeContext } from "../context/DarkModeProvider";
 
 const Layout = ({ children }) => {
   const theme = useTheme();
-
   const [sidebarToggleValue, setSidebarToggleValue] = useState(false);
+  const { dashtheme, toggleTheme } = useContext(DarkModeContext);
 
   return (
     <>
@@ -24,12 +25,13 @@ const Layout = ({ children }) => {
           />
           <Box
             style={{
-              backgroundColor: theme.palette.secondary.main,
+              backgroundColor: "var(--bg-navbar)",
               height: "100%",
               overflowY: "auto",
               flex: 1,
             }}
             sx={{ p: 2 }}
+            className={`App ${dashtheme}`}
           >
             {children}
           </Box>

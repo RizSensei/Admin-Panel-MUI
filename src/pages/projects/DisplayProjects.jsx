@@ -17,12 +17,7 @@ import Masonry from "react-masonry-css";
 
 
 
-const DisplayProjects = ({retrieveProjects}) => {
-  const {
-    data: projects,
-    error,
-    isLoading,
-  } = useQuery("projectsData", retrieveProjects);
+const DisplayProjects = ({projects, isLoading, error}) => {
 
   if (isLoading) return <IsLoading />;
 
