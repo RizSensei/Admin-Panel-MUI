@@ -146,7 +146,7 @@
     {
       "id": 2,
       "name": "Jane Smith",
-      "role": "Designer",
+      "role": "UI/UX Designer",
       "experience": "3",
       "department": "Design",
       "email": "jane.smith@example.com"
@@ -154,7 +154,7 @@
     {
       "id": 3,
       "name": "Bob Johnson",
-      "role": "Project Manager",
+      "role": "Software Engineer",
       "experience": "7",
       "department": "Management",
       "email": "bob.johnson@example.com"
@@ -210,7 +210,7 @@
     {
       "id": 10,
       "name": "Henry Blue",
-      "role": "System Analyst",
+      "role": "QA Tester",
       "experience": "7",
       "department": "Engineering",
       "email": "henry.blue@example.com"
@@ -226,7 +226,7 @@
     {
       "id": 12,
       "name": "Oliver Gray",
-      "role": "Full Stack Developer",
+      "role": "Backend Developer",
       "experience": "6",
       "department": "Engineering",
       "email": "oliver.gray@example.com"

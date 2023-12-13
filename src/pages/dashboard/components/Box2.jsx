@@ -16,6 +16,7 @@ const Box2 = () => {
               display: "flex",
               alignItems: "center",
               columnGap: 2,
+              boxShadow: 2
             }}
           >
             <Box>
@@ -40,6 +41,7 @@ const Box2 = () => {
               display: "flex",
               alignItems: "center",
               columnGap: 2,
+              boxShadow: 2
             }}
           >
             <Box sx={{ display:"flex",flexDirection:"column",rowGap: 1.5, width:'100%' }}>
@@ -63,6 +65,7 @@ const Box2 = () => {
               display: "flex",
               alignItems: "center",
               columnGap: 2,
+              boxShadow: 2
             }}
           >
             <Box>
@@ -90,6 +93,7 @@ const Box2 = () => {
               display: "flex",
               alignItems: "center",
               columnGap: 2,
+              boxShadow: 2
             }}
           >
             <Box>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const SidebarButton = ({ icon: IconComponent, title, route, isTitleHidden }) => {
@@ -7,13 +7,15 @@ const SidebarButton = ({ icon: IconComponent, title, route, isTitleHidden }) => 
   return (
     <Link to={route}>
       <Button
-      size="large"
+      // size="large"
       type="button"
         variant="outlined"
-        startIcon={<IconComponent />}
-        sx={{ color: "white", mb:1 }}
+        startIcon={<IconComponent  sx={{fontWeight:'600', color:'gray'}}/>}
+        sx={{ color: "white", mb:2, width:'100%', display:'flex', justifyContent:'flex-start' }}
       >
-        {!isTitleHidden && title}
+        <Typography sx={{fontWeight:'500', textTransform: 'none'}}>
+          {!isTitleHidden && title}
+        </Typography>
       </Button>
     </Link>
   );

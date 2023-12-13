@@ -37,7 +37,7 @@ const DisplayProjects = ({projects, isLoading, error}) => {
       columnClassName="my-masonry-grid_column"
     >
       {projects?.map((project, index) => (
-        <Card sx={{ maxWidth: 345 }} key={index}>
+        <Card sx={{ maxWidth: 345, '&:hover': { transform: 'scale(1.05)',transition: 'transform 0.3s ease' }}} key={index}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -46,7 +46,7 @@ const DisplayProjects = ({projects, isLoading, error}) => {
               alt="project image"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5" component="div" sx={{fontWeight:'500'}}>
                 {project.name}
               </Typography>
               <Chip

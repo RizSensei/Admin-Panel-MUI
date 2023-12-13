@@ -7,6 +7,7 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import FolderIcon from "@mui/icons-material/Folder";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonIcon from '@mui/icons-material/Person';
+import theme from "../../theme/theme";
 
 const Sidebar = ({ sidebarToggleValue }) => {
   const sideBarMenu = [
@@ -31,9 +32,9 @@ const Sidebar = ({ sidebarToggleValue }) => {
       route: '/clients'
     },
     {
-      title: "Email",
+      title: "Emails",
       icon: EmailIcon,
-      // route: '/email'
+      route: '/email'
     },
   ];
 
@@ -57,11 +58,13 @@ const Sidebar = ({ sidebarToggleValue }) => {
         <Button>
           <Avatar sx={{ width: 44, height: 44 }}>.f</Avatar>
         </Button>
-        <Box
+        {
+          !sidebarToggleValue && <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            fontFamily: theme.typography.fontFamily
           }}
         >
           <Typography variant="h4" sx={{ color: "white", fontWeight: "600" }}>
@@ -73,8 +76,10 @@ const Sidebar = ({ sidebarToggleValue }) => {
             Rizen Admin Dashboard
           </Typography>
         </Box>
+        }
+        
       </Box>
-      <Box sx={{ mt: 2, display: "flex", flexDirection: "column" }}>
+      <Box sx={{ mt: 3 }}>
         {sideBarMenu.map((item,index) => (
           <SidebarButton key={index} icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggleValue} />
         ))}

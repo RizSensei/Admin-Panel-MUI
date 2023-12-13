@@ -8,15 +8,18 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useQuery } from "react-query";
 import IsLoading from "../../components/useQuery/IsLoading";
 import Error from "../../components/useQuery/Error";
+import { DarkModeContext } from "../../context/DarkModeProvider";
 
 const ClientsData = ({ clients, isLoading, error }) => {
 
   if (isLoading) return <IsLoading />;
   if (error) return <Error error={error} />;
+
+  const { dashtheme, toggleTheme } = useContext(DarkModeContext);
 
   return (
     <TableContainer component={Paper}>
@@ -34,12 +37,12 @@ const ClientsData = ({ clients, isLoading, error }) => {
           </TableRow>
         </TableHead>
 
-        <TableBody>
+        <TableBody className={`App ${dashtheme}`} sx={{backgroundColor:'var(--bg-table)'}}>
           {clients?.map((client, index) => (
             <TableRow key={index}>
-              <TableCell>{index + 1}</TableCell>
-              <TableCell>{client.name}</TableCell>
-              <TableCell>{client.industry}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{index + 1}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{client.name}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{client.industry}</TableCell>
               <TableCell>
                 <Typography
                   variant="body2"
@@ -65,11 +68,11 @@ const ClientsData = ({ clients, isLoading, error }) => {
                   {client.status}
                 </Typography>
               </TableCell>
-              <TableCell>{client.notes}</TableCell>
-              <TableCell>{client.contactPerson}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{client.notes}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{client.contactPerson}</TableCell>
 
-              <TableCell>{client.email}</TableCell>
-              <TableCell>{client.phone}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{client.email}</TableCell>
+              <TableCell sx={{color:'var(--text-table)'}}>{client.phone}</TableCell>
             </TableRow>
           ))}
         </TableBody>

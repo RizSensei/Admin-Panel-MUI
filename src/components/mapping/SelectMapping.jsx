@@ -1,11 +1,13 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
 
-const SelectMapping = ({ label, content, onChange }) => {
+const SelectMapping = ({ label,content,onChange }) => {
   const handleChange = (event) => {
     const selectedIndex = event.target.value;
-    const selectedValue = content[selectedIndex];
-    onChange(selectedValue);
+    if (selectedIndex !== undefined && selectedIndex >= 0 && selectedIndex < content.length) {
+      const selectedValue = content[selectedIndex];
+      onChange(selectedValue);
+    }
   };
   return (
     <FormControl sx={{ minWidth: { xs: 150 } }}>

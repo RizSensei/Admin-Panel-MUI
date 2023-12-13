@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
               overflowY: "auto",
               flex: 1,
             }}
-            sx={{ p: 2 }}
+            sx={{ p: 2, fontFamily: theme.typography.fontFamily }}
             className={`App ${dashtheme}`}
           >
             {children}

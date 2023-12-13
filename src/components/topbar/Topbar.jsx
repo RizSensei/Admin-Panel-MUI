@@ -25,7 +25,6 @@ const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
     <Box
       position="static"
       sx={{
-        // bgcolor: "secondary.main",
         bgcolor: "var(--bg-navbar)",
         color: "var(--text-primary)",
         px: 3,

@@ -1,13 +1,7 @@
-import React from "react";
-import axios from "axios";
-import { useQuery } from "react-query";
-
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
+import React, { useContext } from "react";
 
 import {
   Avatar,
-  IconButton,
   Paper,
   Table,
   TableBody,
@@ -21,24 +15,15 @@ import IsLoading from "../../components/useQuery/IsLoading";
 import Error from "../../components/useQuery/Error";
 import DeleteTeammateButton from "../../components/deleteTeammateButton/DeleteTeammateButton";
 import UpdateTeam from "../../components/modal/UpdateTeam";
+import { DarkModeContext } from "../../context/DarkModeProvider";
 
-const retrieveTeams = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
-  const response = await axios.get("http://localhost:3000/teams");
-  return response.data;
-};
-
-const DisplayTeamData = () => {
-  const {
-    data: teams,
-    error,
-    isLoading,
-  } = useQuery("teamsData", retrieveTeams);
-
+const DisplayTeamData = ({ teams, isLoading, error }) => {
+  
   if (isLoading) return <IsLoading />;
 
   if (error) return <Error error={error} />;
+
+  const { dashtheme, toggleTheme } = useContext(DarkModeContext);
 
   return (
       <TableContainer component={Paper}>
@@ -48,59 +33,59 @@ const DisplayTeamData = () => {
               <TableCell>S.No</TableCell>
               <TableCell>Avatar</TableCell>
               <TableCell
-                align="right"
-                sx={{ fontWeight: "600", color: "gray" }}
+                
+                sx={{ fontWeight: "600"}}
               >
                 Name
               </TableCell>
               <TableCell
-                align="right"
-                sx={{ fontWeight: "600", color: "gray" }}
+                
+                sx={{ fontWeight: "600"}}
               >
                 Role
               </TableCell>
               <TableCell
-                align="right"
-                sx={{ fontWeight: "600", color: "gray" }}
+                
+                sx={{ fontWeight: "600"}}
               >
                 Experience(yrs)
               </TableCell>
               <TableCell
-                align="right"
-                sx={{ fontWeight: "600", color: "gray" }}
+                
+                sx={{ fontWeight: "600"}}
               >
                 Department
               </TableCell>
               <TableCell
-                align="right"
-                sx={{ fontWeight: "600", color: "gray" }}
+                
+                sx={{ fontWeight: "600"}}
               >
                 Email
               </TableCell>
               <TableCell
-                align="right"
-                sx={{ fontWeight: "600", color: "gray" }}
+                
+                sx={{ fontWeight: "600"}}
               >
                 Action
               </TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody className={`App ${dashtheme}`} sx={{backgroundColor:'var(--bg-table)'}}>
             {teams?.map((team, index) => (
               <TableRow
                 key={index}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                sx={{ "&:last-child td, &:last-child th": { border: 0  } }}
               >
-                <TableCell>{index+1}</TableCell>
+                <TableCell sx={{color:'var(--text-table)'}}>{index+1}</TableCell>
                 <TableCell component="th" scope="row">
                   <Avatar>{team.name.substring(0, 1)}</Avatar>
                 </TableCell>
-                <TableCell align="right">{team.name}</TableCell>
-                <TableCell align="right">{team.role}</TableCell>
-                <TableCell align="right">{team.experience}</TableCell>
-                <TableCell align="right">{team.department}</TableCell>
-                <TableCell align="right">{team.email}</TableCell>
-                <TableCell align="right" sx={{display:'flex'}}>
+                <TableCell  sx={{color:'var(--text-table)'}}>{team.name}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)'}}>{team.role}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)'}}>{team.experience}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)'}}>{team.department}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)'}}>{team.email}</TableCell>
+                <TableCell  sx={{display:'flex'}}>
                   <UpdateTeam/>
                   <DeleteTeammateButton name={team.name} id={team.id}/>
                 </TableCell>

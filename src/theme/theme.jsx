@@ -11,6 +11,10 @@ const theme = createTheme({
     },
   },
 
+  typography:{
+    fontFamily: 'Rubik'
+  },
+
   palette:{
     primary: {
       main: '#343a40',

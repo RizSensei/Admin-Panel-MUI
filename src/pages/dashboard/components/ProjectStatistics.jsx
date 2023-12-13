@@ -21,13 +21,13 @@ const ProjectStatistics = () => {
   });
 
   useEffect(() => {
-    const completed = Projects.filter(
+    const completed = Projects?.filter(
       (project) => project.status === "Completed"
     ).length;
-    const planned = Projects.filter(
+    const planned = Projects?.filter(
       (project) => project.status === "Planned"
     ).length;
-    const inProgress = Projects.filter(
+    const inProgress = Projects?.filter(
       (project) => project.status === "In Progress"
     ).length;
 
@@ -38,7 +38,6 @@ const ProjectStatistics = () => {
       inProgress: inProgress,
     });
   }, []);
-  // console.log(status)
 
   const options = {
     chart: {
@@ -59,7 +58,7 @@ const ProjectStatistics = () => {
   const series = [status.completed, status.planned, status.inProgress];
 
   return (
-    <Box component={Paper} sx={{ p: 2 }}>
+    <Box component={Paper} sx={{ p: 2, backgroundColor:'#e2e8f0', boxShadow:2 }}>
       <Typography variant="h5" sx={{ fontWeight: "600" }}>
         Project Statistics
       </Typography>

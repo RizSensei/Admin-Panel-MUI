@@ -1,11 +1,9 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, useMemo } from "react";
 import Layout from "../../layout/Layout";
 import { Box, Button, Paper } from "@mui/material";
 import SelectMapping from "../../components/mapping/SelectMapping";
 import ClientsData from "./ClientsData";
 import axios from "axios";
-import IsLoading from "../../components/useQuery/IsLoading";
-import Error from "../../components/useQuery/Error";
 import { useQuery } from "react-query";
 import Search from "../../components/search/Search";
 
@@ -30,11 +28,11 @@ const Clients = () => {
   const [selectedStatus, setSelectedStatus] = useState("");
   const [selectedIndustry, setSelectedIndustry] = useState("");
 
-  const filterClients = useCallback(() => {
+  const filteredClients = useMemo(() => {
     let filteredClients = clients;
 
     if (selectedStatus === "" && selectedIndustry === "") {
-      setItems(clients);
+      return clients;
     }
 
     if (selectedStatus !== "") {
@@ -44,8 +42,12 @@ const Clients = () => {
       filteredClients = filteredClients.filter((client) => client.industry === selectedIndustry);
     }
 
-    setItems(filteredClients);
+    return filteredClients;
   }, [clients, selectedStatus, selectedIndustry]);
+
+  const filterClients = () => {
+    setItems(filteredClients);
+  };
 
   const handleStatusChange = useCallback((value) => {
     setSelectedStatus(value);
@@ -53,13 +55,13 @@ const Clients = () => {
 
   const handleIndustryChange = useCallback((value) => {
     setSelectedIndustry(value);
-  }, []);
+  }, [selectedIndustry]);
 
   const ResetClients = useCallback(() => {
-    setSelectedIndustry("");
-    setSelectedStatus("");
+    setSelectedIndustry(null);
+    setSelectedStatus(null);
     refetch();
-  }, [refetch]);
+  }, [selectedIndustry]);
 
   useEffect(() => {
     setItems(clients);
@@ -85,8 +87,8 @@ const Clients = () => {
         </Box>
 
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          <SelectMapping label="Industry" content={industry} onChange={handleIndustryChange} />
-          <SelectMapping label="Status" content={status} onChange={handleStatusChange} />
+          <SelectMapping label="Industry" content={industry} value={selectedIndustry} onChange={handleIndustryChange} />
+          <SelectMapping label="Status" content={status} value={selectedStatus} onChange={handleStatusChange} />
           <Button variant="contained" size="small" onClick={filterClients}>
             Filter
           </Button>

@@ -6,10 +6,7 @@
 }
 
 :root {
-  --primary-blue: rgb(0, 0, 255);
-  --secondary-blue: rgb(96, 96, 182);
-
-  --text-primary-light: black;
+  --text-primary-light: #343a40;
   --text-primary-dark: white;
 
   --text-secondary-light: rgb(70, 70, 70);
@@ -26,6 +23,12 @@
 
   --bg-topbar-light: white;
   --bg-topbar-dark: #343a40;
+
+  --bg-table-light: white;
+  --bg-table-dark: #343a40;
+
+  --text-table-light: black;
+  --text-table-dark: white;
 }
 
 .light-theme {
@@ -34,7 +37,9 @@
   --bg-primary: var(--bg-primary-light);
   --bg-secondary: var(--bg-secondary-light);
   --bg-navbar: var(--bg-navbar-light);
-  --bg-topbar: var(--bg-topbar-light)
+  --bg-topbar: var(--bg-topbar-light);
+  --bg-table: var(--bg-table-light);
+  --text-table: var(--text-table-light)
 }
 
 .dark-theme {
@@ -43,5 +48,7 @@
   --bg-primary: var(--bg-primary-dark);
   --bg-secondary: var(--bg-secondary-dark);
   --bg-navbar: var(--bg-navbar-dark);
-  --bg-topbar: var(--bg-topbar-dark)
+  --bg-topbar: var(--bg-topbar-dark);
+  --bg-table: var(--bg-table-dark);
+  --text-table: var(--text-table-dark);
 }

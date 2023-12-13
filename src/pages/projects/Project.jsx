@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Layout from "../../layout/Layout";
 import {
   Box,
@@ -40,6 +40,7 @@ const Project = () => {
     data: projects,
     error,
     isLoading,
+    refetch
   } = useQuery("projectsData", retrieveProjects);
 
   const [items, setItems] = useState(projects);
@@ -58,11 +59,15 @@ const Project = () => {
     [projects]
   );
 
-  const filterProjects = useCallback(() => {
+  const filteredProjects = useMemo(() => {
     let filteredProjects = projects;
 
     if (projectStatus === "" && projectBudget === "") {
-      setItems(projects);
+      return projects;
+    }
+
+    if(projectStatus === "All"){
+      return projects;
     }
 
     if (projectStatus !== "") {
@@ -72,8 +77,18 @@ const Project = () => {
       filteredProjects = filteredProjects.filter((project) => project.budget === projectBudget);
     }
 
-    setItems(filteredProjects);
+    return filteredProjects;
   }, [projects, projectStatus, projectBudget]);
+
+  const filterProjects = () => {
+    setItems(filteredProjects);
+  };
+
+  const ResetProjects = useCallback(() => {
+    setProjectBudget(null);
+    setProjectStatus(null);
+    refetch();
+  }, [refetch]);
 
   return (
     <Layout>
@@ -82,7 +97,6 @@ const Project = () => {
         sx={{ display: "flex", justifyContent: "space-between", mb: 2, p: 2 }}
       >
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          {/* <AddTeam/> */}
           <Search items={items} onSearch={handleSearch} />
         </Box>
 
@@ -91,6 +105,9 @@ const Project = () => {
           <SelectMapping label="Budget" content={budget} onChange={handleProjectBudgetChange}  />
           <Button variant="contained" size="small" onClick={filterProjects}>
             Filter
+          </Button>
+          <Button variant="contained" size="small" sx={{ backgroundColor: 'red' }} onClick={ResetProjects}>
+            Reset
           </Button>
         </Box>
       </Box>
