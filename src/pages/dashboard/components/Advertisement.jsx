@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 
-const Box1 = () => {
+const Advertisement = () => {
   return (
     <Box
             sx={{
@@ -43,4 +43,4 @@ const Box1 = () => {
   )
 }
 
-export default Box1
+export default Advertisement

@@ -1,13 +1,13 @@
-import React from 'react'
-import Box from '@mui/material/Box';
+import Logout from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Logout from '@mui/icons-material/Logout';
-import PersonIcon from '@mui/icons-material/Person';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from '../../../redux/features/adminSlice';
 
 const ProfileMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,6 +18,14 @@ const ProfileMenu = () => {
     const handleClose = () => {
       setAnchorEl(null);
     };
+
+    const user = useSelector(selectUser);
+    const dispatch = useDispatch();
+
+    const handleLogOutClick = (e) => {
+      dispatch(logout());
+    }
+
     return (
       <>
         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -67,16 +75,9 @@ const ProfileMenu = () => {
           transformOrigin={{ horizontal: 'right', vertical: 'top' }}
           anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         >
-          <MenuItem onClick={handleClose} sx={{px:5}}>
-          <ListItemIcon>
-              <PersonIcon fontSize="small" />
-            </ListItemIcon>
-            Profile
-          </MenuItem>
-          <Divider />
-          <MenuItem onClick={handleClose} sx={{px:5}}>
+          <MenuItem onClick={(e) => handleLogOutClick(e)} sx={{px:5}}>
             <ListItemIcon>
-              <Logout fontSize="small" sx={{color:'red'}} />
+              <Logout fontSize="small" sx={{color:'red'}}/>
             </ListItemIcon>
             Logout
           </MenuItem>

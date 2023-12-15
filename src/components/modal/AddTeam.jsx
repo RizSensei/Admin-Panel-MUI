@@ -25,7 +25,7 @@ const AddTeam = () => {
     <div>
       <Button
         variant="text" onClick={handleOpen}
-        sx={{ fontWeight: "600", fontSize: "15px", borderRadius:'50%' }}
+        sx={{ fontWeight: "600", fontSize: "15px" }}
       >
         +
       </Button>
@@ -36,7 +36,7 @@ const AddTeam = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <AddTeamForm/>
+          <AddTeamForm setOpen={setOpen}/>
         </Box>
       </Modal>
     </div>

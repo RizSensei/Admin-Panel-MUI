@@ -16,6 +16,7 @@ import Error from "../../components/useQuery/Error";
 import DeleteTeammateButton from "../../components/deleteTeammateButton/DeleteTeammateButton";
 import UpdateTeam from "../../components/modal/UpdateTeam";
 import { DarkModeContext } from "../../context/DarkModeProvider";
+import FilterNotFound from "../../components/FilterNotFound/FilterNotFound";
 
 const DisplayTeamData = ({ teams, isLoading, error }) => {
   
@@ -27,7 +28,10 @@ const DisplayTeamData = ({ teams, isLoading, error }) => {
 
   return (
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        {
+          teams.length === 0 ? 
+          <FilterNotFound/>:
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>S.No</TableCell>
@@ -86,13 +90,15 @@ const DisplayTeamData = ({ teams, isLoading, error }) => {
                 <TableCell  sx={{color:'var(--text-table)'}}>{team.department}</TableCell>
                 <TableCell  sx={{color:'var(--text-table)'}}>{team.email}</TableCell>
                 <TableCell  sx={{display:'flex'}}>
-                  <UpdateTeam/>
+                  <UpdateTeam id={team.id} teams={teams}/>
                   <DeleteTeammateButton name={team.name} id={team.id}/>
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
+        }
+        
       </TableContainer>
   );
 };

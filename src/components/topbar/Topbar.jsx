@@ -1,25 +1,17 @@
-import {
-  Box,
-  Button,
-  Switch,
-  Typography,
-} from "@mui/material";
-import React, { useContext } from "react";
-import "../../App.css"
-import MenuIcon from "@mui/icons-material/Menu";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import SearchAutoComplete from "./searchAutoComplete/SearchAutoComplete";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Button, Switch, Typography } from "@mui/material";
+import React, { useContext } from "react";
+import "../../App.css";
+import { DarkModeContext } from "../../context/DarkModeProvider";
+import { SidebarContext } from "../../context/SidebarContext";
 import IconStack from "./icon-stack/IconStack";
 import ProfileMenu from "./profile-menu/ProfileMenu";
-import { DarkModeContext } from "../../context/DarkModeProvider";
+import SearchAutoComplete from "./searchAutoComplete/SearchAutoComplete";
 
-
-const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
-  const performSidebarToggle = () => {
-    setSidebarToggleValue(!sidebarToggleValue);
-  };
-
+const Topbar = () => {
   const { dashtheme, toggleTheme } = useContext(DarkModeContext);
+  const { sidebarToggle, toggleSidebar } = useContext(SidebarContext);
 
   return (
     <Box
@@ -40,8 +32,8 @@ const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Button onClick={() => performSidebarToggle()}>
-            {sidebarToggleValue ? (
+          <Button onClick={() => toggleSidebar()}>
+            {sidebarToggle ? (
               <ArrowForwardIcon fontSize="large" />
             ) : (
               <MenuIcon fontSize="large" />
@@ -53,7 +45,7 @@ const Topbar = ({ setSidebarToggleValue, sidebarToggleValue }) => {
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <SearchAutoComplete />
-          <Switch onChange={() => toggleTheme()}/>
+          <Switch onChange={() => toggleTheme()} />
           <IconStack />
           <Button>
             <ProfileMenu />

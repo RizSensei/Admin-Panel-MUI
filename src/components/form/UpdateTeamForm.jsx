@@ -1,31 +1,38 @@
-import { Button, InputAdornment, TextField } from '@mui/material';
-import { Formik } from 'formik';
-import React from 'react'
-import { useMutation, useQueryClient } from 'react-query';
+import { Button, InputAdornment, TextField } from "@mui/material";
+import axios from "axios";
+import { Formik } from "formik";
+import React from "react";
+import { useMutation, useQueryClient } from "react-query";
+import { toast } from "react-toastify";
 
-const UpdateTeamForm = () => {
-    const client = useQueryClient();
+const UpdateTeamForm = ({ id, teams, setOpen }) => {
 
-    const mutation = useMutation((updatedTeamsData) =>
-      axios.put("http://localhost:3000/teams", updatedTeamsData),
-      {
-        onSuccess: () => {
-          client.invalidateQueries(["teamsData"]);
-          return toast.success("Successfully Updated");
-        },
-        onError: () => {
-          return toast.error("Something went wrong!");
-        }
-      }
-    );
+  const member = teams.find((team) => team.id == id);
+
+  const client = useQueryClient();
+
+  const mutation = useMutation(
+    (updatedTeamsData) =>
+      axios.put(`http://localhost:3000/teams/${id}`, updatedTeamsData),
+    {
+      onSuccess: () => {
+        client.invalidateQueries(["teamsData"]);
+        setOpen(false);
+        return toast.success("Successfully Updated");
+      },
+      onError: () => {
+        return toast.error("Something went wrong!");
+      },
+    }
+  );
   return (
     <Formik
       initialValues={{
-        name: "",
-        role: "",
-        experience: "",
-        department: "",
-        email: "",
+        name: member.name,
+        role: member.role,
+        experience: member.experience,
+        department: member.department,
+        email: member.email,
       }}
       onSubmit={(values) => {
         mutation.mutate(values);
@@ -100,7 +107,7 @@ const UpdateTeamForm = () => {
         </form>
       )}
     </Formik>
-  )
-}
+  );
+};
 
-export default UpdateTeamForm
+export default UpdateTeamForm;

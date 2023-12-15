@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../../layout/Layout";
-import { Box, Button, Grid, Typography } from "@mui/material";
-import Box1 from "./components/Box1";
-import Box2 from "./components/Box2";
+import { Grid } from "@mui/material";
+import Advertisement from "./components/Advertisement";
+import Data from "./components/Data";
 import ProjectStatistics from "./components/ProjectStatistics";
 import Masonry from "react-masonry-css";
+import ActivityLog from "./components/ActivityLog";
 
 const Dashboard = () => {
   const breakpointColumnsObj = {
@@ -20,20 +21,18 @@ const Dashboard = () => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
           <Grid item xs={6}>
-            <Box1 />
+            <Advertisement />
           </Grid>
           <Grid item xs={6}>
-            <Box2 />
+            <Data />
           </Grid>
           <Grid item xs={6}>
             <ProjectStatistics/>
           </Grid>
           <Grid item xs={6}>
-            <Box>4</Box>
+            <ActivityLog/>
           </Grid>
-        {/* </Grid> */}
       </Masonry>
     </Layout>
   );

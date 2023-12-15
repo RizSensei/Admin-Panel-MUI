@@ -16,7 +16,7 @@ const style = {
     p: 4,
   };
 
-const UpdateTeam = () => {
+const UpdateTeam = ({id, teams}) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -32,7 +32,7 @@ const UpdateTeam = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <UpdateTeamForm />
+          <UpdateTeamForm id={id} teams={teams} setOpen={setOpen}/>
         </Box>
       </Modal>
     </div>

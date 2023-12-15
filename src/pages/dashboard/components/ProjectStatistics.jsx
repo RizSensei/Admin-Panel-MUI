@@ -1,8 +1,8 @@
+import { Box, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useQuery } from "react-query";
 import ReactApexChart from "react-apexcharts";
-import { Box, Paper, Typography } from "@mui/material";
+import { useQuery } from "react-query";
 
 const ProjectStatistics = () => {
   const {
@@ -19,18 +19,18 @@ const ProjectStatistics = () => {
     planned: 0,
     inProgress: 0,
   });
+  
+  const completed = Projects?.filter(
+    (project) => project.status === "Completed"
+  ).length;
+  const planned = Projects?.filter(
+    (project) => project.status === "Planned"
+  ).length;
+  const inProgress = Projects?.filter(
+    (project) => project.status === "In Progress"
+  ).length;
 
   useEffect(() => {
-    const completed = Projects?.filter(
-      (project) => project.status === "Completed"
-    ).length;
-    const planned = Projects?.filter(
-      (project) => project.status === "Planned"
-    ).length;
-    const inProgress = Projects?.filter(
-      (project) => project.status === "In Progress"
-    ).length;
-
     setStatus({
       ...status,
       completed: completed,

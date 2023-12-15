@@ -1,4 +1,10 @@
 {
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
   "projects": [
     {
       "id": 1,
@@ -144,12 +150,12 @@
   ],
   "teams": [
     {
-      "id": 2,
       "name": "Jane Smith",
       "role": "UI/UX Designer",
-      "experience": "3",
+      "experience": "6",
       "department": "Design",
-      "email": "jane.smith@example.com"
+      "email": "jane.smith@example.com",
+      "id": 2
     },
     {
       "id": 3,
@@ -274,7 +280,7 @@
     {
       "name": "Enel Dimario",
       "role": "Backend Developer",
-      "experience": "2",
+      "experience": "5",
       "department": "Engineering",
       "email": "enel.dimario@gmail.com",
       "id": 18

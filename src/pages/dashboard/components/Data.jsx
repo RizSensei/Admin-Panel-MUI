@@ -3,7 +3,7 @@ import React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 
 
-const Box2 = () => {
+const Data = () => {
   return (
     <Box sx={{ width: "100%" }}>
       <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -117,4 +117,4 @@ const Box2 = () => {
   );
 };
 
-export default Box2;
+export default Data;

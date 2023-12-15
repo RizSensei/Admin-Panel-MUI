@@ -3,13 +3,8 @@ import Layout from "../../layout/Layout";
 import {
   Box,
   Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
   Paper,
-  Select,
 } from "@mui/material";
-import SearchAutoComplete from "../../components/topbar/searchAutoComplete/SearchAutoComplete";
 import DisplayProjects from "./DisplayProjects";
 import axios from "axios";
 import SelectMapping from "../../components/mapping/SelectMapping";
@@ -42,6 +37,7 @@ const Project = () => {
     isLoading,
     refetch
   } = useQuery("projectsData", retrieveProjects);
+  // console.log(projects)
 
   const [items, setItems] = useState(projects);
 

@@ -3,6 +3,6 @@ import adminReducer from '../features/adminSlice';
 
 export default configureStore({
     reducer: {
-        Dashboard : adminReducer,
+        user : adminReducer,
     }
 })

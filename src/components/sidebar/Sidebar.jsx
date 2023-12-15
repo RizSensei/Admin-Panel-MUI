@@ -1,15 +1,17 @@
 import { Avatar, Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useContext, useState } from "react";
 import SidebarButton from "../sidebarButton/SidebarButton";
 
-import HomeIcon from "@mui/icons-material/Home";
-import GroupsIcon from "@mui/icons-material/Groups";
-import FolderIcon from "@mui/icons-material/Folder";
 import EmailIcon from "@mui/icons-material/Email";
+import FolderIcon from "@mui/icons-material/Folder";
+import GroupsIcon from "@mui/icons-material/Groups";
+import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from '@mui/icons-material/Person';
+import { SidebarContext } from "../../context/SidebarContext";
 import theme from "../../theme/theme";
 
-const Sidebar = ({ sidebarToggleValue }) => {
+const Sidebar = () => {
+  const {sidebarToggle, toggleSidebar} = useContext(SidebarContext)
   const sideBarMenu = [
     {
       title: "Dashboard",
@@ -31,17 +33,17 @@ const Sidebar = ({ sidebarToggleValue }) => {
       icon: PersonIcon,
       route: '/clients'
     },
-    {
-      title: "Emails",
-      icon: EmailIcon,
-      route: '/email'
-    },
+    // {
+    //   title: "Emails",
+    //   icon: EmailIcon,
+    //   route: '/email'
+    // },
   ];
 
   return (
     <Box
       sx={{
-        width: sidebarToggleValue ? "70px" : "250px",
+        width: sidebarToggle ? "70px" : "250px",
         height: "100%",
         bgcolor: "primary.main",
         transition: "width 0.3s ease-in-out",
@@ -59,7 +61,7 @@ const Sidebar = ({ sidebarToggleValue }) => {
           <Avatar sx={{ width: 44, height: 44 }}>.f</Avatar>
         </Button>
         {
-          !sidebarToggleValue && <Box
+          !sidebarToggle && <Box
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -81,7 +83,7 @@ const Sidebar = ({ sidebarToggleValue }) => {
       </Box>
       <Box sx={{ mt: 3 }}>
         {sideBarMenu.map((item,index) => (
-          <SidebarButton key={index} icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggleValue} />
+          <SidebarButton key={index} icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggle}/>
         ))}
       </Box>
     </Box>

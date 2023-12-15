@@ -6,7 +6,7 @@ import { useMutation, useQueryClient } from "react-query";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const AddTeamForm = () => {
+const AddTeamForm = ({setOpen}) => {
   const client = useQueryClient();
 
   const mutation = useMutation((newTeammate) =>
@@ -14,6 +14,7 @@ const AddTeamForm = () => {
     {
       onSuccess: () => {
         client.invalidateQueries(["teamsData"]);
+        setOpen(false);
         return toast.success("Successfully added into Team");
       },
       onError: () => {
@@ -21,17 +22,6 @@ const AddTeamForm = () => {
       }
     }
   );
-  // if (mutation.isLoading) {
-  //   return toast.info("Adding in process");
-  // }
-  // if (mutation.isError) {
-  //   return toast.error("Something went wrong!");
-  // }
-  // if (mutation.isSuccess) {
-  //   client.invalidateQueries(["teamsData"]);
-  //   return toast.success("Successfully added into Team");
-  // }
-
   
   return (
     <Formik
