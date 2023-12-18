@@ -1,7 +1,7 @@
-import { FormControl, InputAdornment, TextField } from "@mui/material";
-import React, { useMemo, useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
 import ClearIcon from "@mui/icons-material/Clear";
+import SearchIcon from "@mui/icons-material/Search";
+import { FormControl, InputAdornment, TextField } from "@mui/material";
+import React, { useCallback, useState } from "react";
 
 const Search = ({ onSearch }) => {
   const [searchedItem, setSearchedItem] = useState("");
@@ -13,6 +13,11 @@ const Search = ({ onSearch }) => {
     setSearchedItem(searchTerm);
     onSearch(searchTerm);
   };
+
+  const clearSearch = useCallback(() => {
+    setSearchedItem("");
+    // console.log("button clicked");
+  },[searchedItem]);
 
 
   return (
@@ -34,7 +39,7 @@ const Search = ({ onSearch }) => {
               style={{ display: showClearIcon }}
             //   onClick={clearSearch}
             >
-              <ClearIcon />
+              <ClearIcon onClick={clearSearch} sx={{cursor:'pointer'}}/>
             </InputAdornment>
           ),
         }}

@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useContext, useEffect, useMemo, useReducer, useState } from "react";
 import DisplayTeamData from "./DisplayTeamData";
 import {
   Box,
@@ -52,46 +52,61 @@ const Team = () => {
   });
 
   const [items, setItems] = useState(teams);
-  const [selectedRoles, setSelectedRoles] = useState("");
-  const [selectedExperience, setSelectedExperience] = useState("");
-  const [selectedDepartment, setSelectedDepartment] = useState("");
+
+  const initialState = {
+    selectedRoles:'', selectedExperience:'', selectedDepartment:''
+  }
+
+  const teamReducer = (state,action) => {
+    switch(action.type){
+      case 'SET_ROLE':
+        return {...state, selectedRoles: action.payload}
+
+      case 'SET_EXPERIENCE':
+        return {...state, selectedExperience: action.payload}
+
+      case 'SET_DEPARTMENT':
+        return {...state, selectedDepartment: action.payload}
+    }
+  }
+
+  const [state, dispatch] = useReducer(teamReducer, initialState);
 
   const filteredTeams = useMemo(() => {
     let filterTeams = teams;
 
-    if (selectedRoles === "" && selectedExperience === ""  && selectedDepartment === "") {
+    if (state.selectedRoles === "" && state.selectedExperience === ""  && state.selectedDepartment === "") {
       setItems(teams);
     }
 
-    if (selectedRoles !== "") {
-      filterTeams = filterTeams.filter((team) => team.role === selectedRoles);
+    if (state.selectedRoles !== "") {
+      filterTeams = filterTeams.filter((team) => team.role === state.selectedRoles);
     }
-    if (selectedExperience !== "") {
-      filterTeams = filterTeams.filter((team) => team.experience === selectedExperience);
+    if (state.selectedExperience !== "") {
+      filterTeams = filterTeams.filter((team) => team.experience === state.selectedExperience);
     }
-    if (selectedDepartment !== "") {
-      filterTeams = filterTeams.filter((team) => team.department === selectedDepartment);
+    if (state.selectedDepartment !== "") {
+      filterTeams = filterTeams.filter((team) => team.department === state.selectedDepartment);
     }
 
     return filterTeams;
-  }, [teams, selectedRoles, selectedExperience, selectedDepartment]);
+  }, [state]);
 
   const filterTeams = () => {
     setItems(filteredTeams);
   };
 
-
   const handleRolesChange = useCallback((value) => {
-    setSelectedRoles(value);
-  }, []);
+    dispatch({type:'SET_ROLE', payload:value})
+  }, [state.selectedRoles]);
 
   const handleExperienceChange = useCallback((value) => {
-    setSelectedExperience(value);
-  }, []);
+    dispatch({type:'SET_EXPERIENCE', payload:value})
+  }, [state.selectedExperience]);
 
   const handleDepartmentChange = useCallback((value) => {
-    setSelectedDepartment(value);
-  }, []);
+    dispatch({type:'SET_DEPARTMENT', payload:value})
+  }, [state.selectedDepartment]);
 
   useEffect(() => {
     setItems(teams);

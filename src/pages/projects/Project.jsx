@@ -1,10 +1,12 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useState,
+} from "react";
 import Layout from "../../layout/Layout";
-import {
-  Box,
-  Button,
-  Paper,
-} from "@mui/material";
+import { Box, Button, Paper } from "@mui/material";
 import DisplayProjects from "./DisplayProjects";
 import axios from "axios";
 import SelectMapping from "../../components/mapping/SelectMapping";
@@ -15,15 +17,36 @@ const Project = () => {
   const status = ["All", "Completed", "Planned", "In Progress"];
   const budget = ["<50K", "50K-100K", ">100K"];
 
-  const [projectStatus, setProjectStatus] = useState("");
-  const [projectBudget, setProjectBudget] = useState("");
+  // const [projectStatus, setProjectStatus] = useState("");
+  // const [projectBudget, setProjectBudget] = useState("");
+
+  /** useReducer */
+  const initialState = {
+    projectStatus: "",
+    projectBudget: "",
+  };
+
+  const projectReducer = (state, action) => {
+    switch (action.type) {
+      case "RESET_PROJECT":
+        return { ...state, projectStatus: "", projectBudget: "" };
+
+      case "SET_BUDGET":
+        return { ...state, projectBudget: action.payload };
+
+      case "SET_STATUS":
+        return { ...state, projectStatus: action.payload };
+    }
+  };
+
+  const [state, dispatch] = useReducer(projectReducer, initialState);
 
   const handleProjectStatusChange = useCallback((value) => {
-    setProjectStatus(value);
-  },[]);
+    dispatch({type:'SET_STATUS', payload:value})
+  }, []);
   const handleProjectBudgetChange = useCallback((value) => {
-    setProjectBudget(value);
-  },[]);
+    dispatch({type:'SET_BUDGET', payload:value})
+  }, []);
 
   const retrieveProjects = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -35,9 +58,8 @@ const Project = () => {
     data: projects,
     error,
     isLoading,
-    refetch
+    refetch,
   } = useQuery("projectsData", retrieveProjects);
-  // console.log(projects)
 
   const [items, setItems] = useState(projects);
 
@@ -58,31 +80,34 @@ const Project = () => {
   const filteredProjects = useMemo(() => {
     let filteredProjects = projects;
 
-    if (projectStatus === "" && projectBudget === "") {
+    if (state.projectStatus === "" && state.projectBudget === "") {
       return projects;
     }
 
-    if(projectStatus === "All"){
+    if (state.projectStatus === "All") {
       return projects;
     }
 
-    if (projectStatus !== "") {
-      filteredProjects = filteredProjects.filter((project) => project.status === projectStatus);
+    if (state.projectStatus !== "") {
+      filteredProjects = filteredProjects.filter(
+        (project) => project.status === state.projectStatus
+      );
     }
-    if (projectBudget !== "") {
-      filteredProjects = filteredProjects.filter((project) => project.budget === projectBudget);
+    if (state.projectBudget !== "") {
+      filteredProjects = filteredProjects.filter(
+        (project) => project.budget === state.projectBudget
+      );
     }
 
     return filteredProjects;
-  }, [projects, projectStatus, projectBudget]);
+  }, [projects, state.projectStatus, state.projectBudget]);
 
   const filterProjects = () => {
     setItems(filteredProjects);
   };
 
   const ResetProjects = useCallback(() => {
-    setProjectBudget(null);
-    setProjectStatus(null);
+    dispatch({type:'RESET_PROJECT'})
     refetch();
   }, [refetch]);
 
@@ -97,12 +122,25 @@ const Project = () => {
         </Box>
 
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          <SelectMapping label="Status" content={status} onChange={handleProjectStatusChange}  />
-          <SelectMapping label="Budget" content={budget} onChange={handleProjectBudgetChange}  />
+          <SelectMapping
+            label="Status"
+            content={status}
+            onChange={handleProjectStatusChange}
+          />
+          <SelectMapping
+            label="Budget"
+            content={budget}
+            onChange={handleProjectBudgetChange}
+          />
           <Button variant="contained" size="small" onClick={filterProjects}>
             Filter
           </Button>
-          <Button variant="contained" size="small" sx={{ backgroundColor: 'red' }} onClick={ResetProjects}>
+          <Button
+            variant="contained"
+            size="small"
+            sx={{ backgroundColor: "red" }}
+            onClick={ResetProjects}
+          >
             Reset
           </Button>
         </Box>

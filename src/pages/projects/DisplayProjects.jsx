@@ -1,9 +1,3 @@
-import React from "react";
-import { useQuery } from "react-query";
-import IsLoading from "../../components/useQuery/IsLoading";
-import Error from "../../components/useQuery/Error";
-import axios from "axios";
-import "../../styles/gridMasonry.css";
 import {
   Box,
   Card,
@@ -13,7 +7,11 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
+import React from "react";
 import Masonry from "react-masonry-css";
+import Error from "../../components/useQuery/Error";
+import IsLoading from "../../components/useQuery/IsLoading";
+import "../../styles/gridMasonry.css";
 
 
 

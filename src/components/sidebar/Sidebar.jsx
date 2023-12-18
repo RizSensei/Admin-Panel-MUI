@@ -9,6 +9,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from '@mui/icons-material/Person';
 import { SidebarContext } from "../../context/SidebarContext";
 import theme from "../../theme/theme";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const {sidebarToggle, toggleSidebar} = useContext(SidebarContext)
@@ -33,11 +34,11 @@ const Sidebar = () => {
       icon: PersonIcon,
       route: '/clients'
     },
-    // {
-    //   title: "Emails",
-    //   icon: EmailIcon,
-    //   route: '/email'
-    // },
+    {
+      title: "Emails",
+      icon: EmailIcon,
+      route: '/email'
+    },
   ];
 
   return (
@@ -50,11 +51,13 @@ const Sidebar = () => {
         cursor: "pointer",
       }}
     >
-      <Box
+      <Link to = "/">
+         <Box
         sx={{
           display: "flex",
           columnGap: 0.5,
           py: 1,
+          textDecoration:'none'
         }}
       >
         <Button>
@@ -81,6 +84,8 @@ const Sidebar = () => {
         }
         
       </Box>
+      </Link>
+     
       <Box sx={{ mt: 3 }}>
         {sideBarMenu.map((item,index) => (
           <SidebarButton key={index} icon={item.icon} title={item.title} route={item.route} isTitleHidden={sidebarToggle}/>

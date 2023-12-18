@@ -397,5 +397,20 @@
       "lastContactDate": "2023-10-20",
       "notes": "Interested in optimizing their logistics management system."
     }
+  ],
+  "emails":[
+    {"id": 1, "type": "primary", "sender": "john.doe@example.com", "subject": "Project Update", "content": "Hi team, here's the latest project update."},
+    {"id": 2, "type": "promotion", "sender": "promo.sales@example.com", "subject": "Exclusive Offer", "content": "Don't miss out on our exclusive offer!"},
+    {"id": 3, "type": "forum", "sender": "tech.forum@example.com", "subject": "Discussion Thread", "content": "Join the discussion on the latest technology trends."},
+    {"id": 4, "type": "socials", "sender": "social.network@example.com", "subject": "Friend Request", "content": "You have a new friend request on the social network."},
+    {"id": 5, "type": "spam", "sender": "unknown.sender@example.com", "subject": "You've Won a Prize!", "content": "Congratulations! You've won a prize. Click here to claim."},
+    {"id": 6, "type": "primary", "sender": "mary.jane@example.com", "subject": "Meeting Reminder", "content": "Friendly reminder: team meeting tomorrow at 10 AM."},
+    {"id": 7, "type": "promotion", "sender": "deals.special@example.com", "subject": "Flash Sale", "content": "Hurry! Limited-time flash sale happening now."},
+    {"id": 8, "type": "forum", "sender": "coding.community@example.com", "subject": "Code Review Request", "content": "Looking for feedback on my latest code. Please review."},
+    {"id": 9, "type": "socials", "sender": "event.invite@example.com", "subject": "Event Invitation", "content": "You're invited to the IT networking event next week."},
+    {"id": 10, "type": "spam", "sender": "lottery.win@example.com", "subject": "You're a Lottery Winner!", "content": "You've won a lottery you didn't enter. Provide your details to claim your prize."},
+    {"id": 11, "type": "primary", "sender": "support.team@example.com", "subject": "IT Support Ticket Update", "content": "Your support ticket has been resolved. Let us know if you need further assistance."},
+    {"id": 12, "type": "promotion", "sender": "discounts.sale@example.com", "subject": "Year-End Discounts", "content": "Explore our year-end discounts on IT equipment and accessories."}
   ]
+  
 }

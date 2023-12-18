@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useMemo } from "react";
+import React, { useCallback, useState, useEffect, useMemo, useReducer } from "react";
 import Layout from "../../layout/Layout";
 import { Box, Button, Paper } from "@mui/material";
 import SelectMapping from "../../components/mapping/SelectMapping";
@@ -25,43 +25,63 @@ const Clients = () => {
   });
 
   const [items, setItems] = useState(clients);
-  const [selectedStatus, setSelectedStatus] = useState("");
-  const [selectedIndustry, setSelectedIndustry] = useState("");
+  // const [selectedStatus, setSelectedStatus] = useState("");
+  // const [selectedIndustry, setSelectedIndustry] = useState("");
+
+    /** useReducer */
+    const initialState = {
+      selectedIndustry: '', selectedStatus: ''
+    };
+
+  const clientReducer = (state, action) => {
+    switch(action.type){
+      case 'RESET_CLIENT':
+        return {...state, selectedIndustry: '', selectedStatus: '' }
+
+      case 'SET_INDUSTRY':
+        return {...state, selectedIndustry: action.payload}
+
+      case 'SET_STATUS':
+        return {...state, selectedStatus:action.payload}
+    }
+  }
+
+  const [state, dispatch] = useReducer(clientReducer, initialState);
 
   const filteredClients = useMemo(() => {
     let filteredClients = clients;
 
-    if (selectedStatus === "" && selectedIndustry === "") {
+    if (state.selectedStatus === "" && state.selectedIndustry === "") {
       return clients;
     }
 
-    if (selectedStatus !== "") {
-      filteredClients = filteredClients.filter((client) => client.status === selectedStatus);
+    if (state.selectedStatus !== "") {
+      filteredClients = filteredClients.filter((client) => client.status === state.selectedStatus);
     }
-    if (selectedIndustry !== "") {
-      filteredClients = filteredClients.filter((client) => client.industry === selectedIndustry);
+    if (state.selectedIndustry !== "") {
+      filteredClients = filteredClients.filter((client) => client.industry === state.selectedIndustry);
     }
 
+
     return filteredClients;
-  }, [clients, selectedStatus, selectedIndustry]);
+  }, [state]);
 
   const filterClients = () => {
     setItems(filteredClients);
   };
 
   const handleStatusChange = useCallback((value) => {
-    setSelectedStatus(value);
-  }, []);
+    dispatch({type:'SET_STATUS', payload:value})
+  }, [state.selectedStatus]);
 
   const handleIndustryChange = useCallback((value) => {
-    setSelectedIndustry(value);
-  }, [selectedIndustry]);
+    dispatch({type:'SET_INDUSTRY', payload:value})
+  }, [state.selectedIndustry]);
 
   const ResetClients = useCallback(() => {
-    setSelectedIndustry(null);
-    setSelectedStatus(null);
+    dispatch({type:'RESET_CLIENT'})
     refetch();
-  }, [selectedIndustry]);
+  }, []);
 
   useEffect(() => {
     setItems(clients);
@@ -87,9 +107,17 @@ const Clients = () => {
         </Box>
 
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          <SelectMapping label="Industry" content={industry} value={selectedIndustry} onChange={handleIndustryChange} />
-          <SelectMapping label="Status" content={status} value={selectedStatus} onChange={handleStatusChange} />
-          <Button variant="contained" size="small" onClick={filterClients}>
+          <SelectMapping label="Industry" content={industry} 
+          // value={state.selectedIndustry}
+           onChange={handleIndustryChange} 
+           />
+          <SelectMapping label="Status" content={status} 
+          // value={state.selectedStatus} 
+          onChange={handleStatusChange}
+           />
+          <Button variant="contained" size="small" 
+          onClick={filterClients}
+          >
             Filter
           </Button>
           <Button variant="contained" size="small" sx={{ backgroundColor: 'red' }} onClick={ResetClients}>
