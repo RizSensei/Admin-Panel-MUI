@@ -26,23 +26,23 @@ const ClientsData = ({ clients, isLoading, error }) => {
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: "600" }}>S.No</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>Name</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>Industry</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>Status</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>Notes</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>ContactPerson</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>Email</TableCell>
-            <TableCell sx={{ fontWeight: "600" }}>Phone</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>S.No</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>Name</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>Industry</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>Status</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>Notes</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>ContactPerson</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>Email</TableCell>
+            <TableCell sx={{ fontWeight: "500", fontSize:'15px' }}>Phone</TableCell>
           </TableRow>
         </TableHead>
 
         <TableBody className={`App ${dashtheme}`} sx={{backgroundColor:'var(--bg-table)'}}>
           {clients?.map((client, index) => (
-            <TableRow key={index}>
-              <TableCell sx={{color:'var(--text-table)'}}>{index + 1}</TableCell>
-              <TableCell sx={{color:'var(--text-table)'}}>{client.name}</TableCell>
-              <TableCell sx={{color:'var(--text-table)'}}>{client.industry}</TableCell>
+            <TableRow key={index} sx={{'&:hover': {backgroundColor:'#e2e8f0'}}}>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{index + 1}</TableCell>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{client.name}</TableCell>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{client.industry}</TableCell>
               <TableCell>
                 <Typography
                   variant="body2"
@@ -61,18 +61,18 @@ const ClientsData = ({ clients, isLoading, error }) => {
                         : "",
                         borderRadius:'10px',
                         padding:'2px',
-                        textAlign:'center'
+                        textAlign:'center', fontSize:'15px'
                   }}
                 >
                   {" "}
                   {client.status}
                 </Typography>
               </TableCell>
-              <TableCell sx={{color:'var(--text-table)'}}>{client.notes}</TableCell>
-              <TableCell sx={{color:'var(--text-table)'}}>{client.contactPerson}</TableCell>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{client.notes}</TableCell>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{client.contactPerson}</TableCell>
 
-              <TableCell sx={{color:'var(--text-table)'}}>{client.email}</TableCell>
-              <TableCell sx={{color:'var(--text-table)'}}>{client.phone}</TableCell>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{client.email}</TableCell>
+              <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{client.phone}</TableCell>
             </TableRow>
           ))}
         </TableBody>

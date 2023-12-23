@@ -24,10 +24,10 @@ const AddTeam = () => {
   return (
     <div>
       <Button
-        variant="text" onClick={handleOpen}
-        sx={{ fontWeight: "600", fontSize: "15px" }}
+        variant="contained" onClick={handleOpen}
+        sx={{ fontSize: "15px", backgroundColor:'#2563eb'}}
       >
-        +
+        + Add Employee
       </Button>
       <Modal
         open={open}

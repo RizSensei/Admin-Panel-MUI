@@ -6,6 +6,8 @@ import Data from "./components/Data";
 import ProjectStatistics from "./components/ProjectStatistics";
 import Masonry from "react-masonry-css";
 import ActivityLog from "./components/ActivityLog";
+import PageTitle from "../../components/pageTitle/PageTitle";
+import CalendarComp from "./components/CalendarComp";
 
 const Dashboard = () => {
   const breakpointColumnsObj = {
@@ -16,6 +18,7 @@ const Dashboard = () => {
   };
   return (
     <Layout>
+      <PageTitle title="Dashboard"/>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid"
@@ -32,6 +35,9 @@ const Dashboard = () => {
           </Grid>
           <Grid item xs={6}>
             <ActivityLog/>
+          </Grid>
+          <Grid item xs={6}>
+            <CalendarComp/>
           </Grid>
       </Masonry>
     </Layout>

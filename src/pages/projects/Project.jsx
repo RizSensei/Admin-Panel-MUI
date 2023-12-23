@@ -12,6 +12,8 @@ import axios from "axios";
 import SelectMapping from "../../components/mapping/SelectMapping";
 import Search from "../../components/search/Search";
 import { useQuery } from "react-query";
+import PageTitle from "../../components/pageTitle/PageTitle";
+import ExportExcel from "../../export/ExportExcel";
 
 const Project = () => {
   const status = ["All", "Completed", "Planned", "In Progress"];
@@ -42,10 +44,10 @@ const Project = () => {
   const [state, dispatch] = useReducer(projectReducer, initialState);
 
   const handleProjectStatusChange = useCallback((value) => {
-    dispatch({type:'SET_STATUS', payload:value})
+    dispatch({ type: "SET_STATUS", payload: value });
   }, []);
   const handleProjectBudgetChange = useCallback((value) => {
-    dispatch({type:'SET_BUDGET', payload:value})
+    dispatch({ type: "SET_BUDGET", payload: value });
   }, []);
 
   const retrieveProjects = async () => {
@@ -107,12 +109,17 @@ const Project = () => {
   };
 
   const ResetProjects = useCallback(() => {
-    dispatch({type:'RESET_PROJECT'})
+    dispatch({ type: "RESET_PROJECT" });
     refetch();
   }, [refetch]);
 
   return (
     <Layout>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <PageTitle title="Project" />
+        <ExportExcel excelData={items} filename={"Project_Report"} />
+      </Box>
+
       <Box
         component={Paper}
         sx={{ display: "flex", justifyContent: "space-between", mb: 2, p: 2 }}

@@ -17,8 +17,9 @@ import DeleteTeammateButton from "../../components/deleteTeammateButton/DeleteTe
 import UpdateTeam from "../../components/modal/UpdateTeam";
 import { DarkModeContext } from "../../context/DarkModeProvider";
 import FilterNotFound from "../../components/FilterNotFound/FilterNotFound";
+import Pagination from "../../components/pagination/Pagination";
 
-const DisplayTeamData = ({ teams, isLoading, error }) => {
+const DisplayTeamData = ({ teams, isLoading, error,setItems }) => {
   
   if (isLoading) return <IsLoading />;
 
@@ -34,41 +35,41 @@ const DisplayTeamData = ({ teams, isLoading, error }) => {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>S.No</TableCell>
-              <TableCell>Avatar</TableCell>
+              <TableCell sx={{fontSize:'15px'}}>S.No</TableCell>
+              <TableCell sx={{fontSize:'15px'}}>Avatar</TableCell>
               <TableCell
                 
-                sx={{ fontWeight: "600"}}
+                sx={{ fontWeight: "500", fontSize:'15px'}}
               >
                 Name
               </TableCell>
               <TableCell
                 
-                sx={{ fontWeight: "600"}}
+                sx={{ fontWeight: "500", fontSize:'15px'}}
               >
                 Role
               </TableCell>
               <TableCell
                 
-                sx={{ fontWeight: "600"}}
+                sx={{ fontWeight: "500", fontSize:'15px'}}
               >
                 Experience(yrs)
               </TableCell>
               <TableCell
                 
-                sx={{ fontWeight: "600"}}
+                sx={{ fontWeight: "500", fontSize:'15px'}}
               >
                 Department
               </TableCell>
               <TableCell
                 
-                sx={{ fontWeight: "600"}}
+                sx={{ fontWeight: "500", fontSize:'15px'}}
               >
                 Email
               </TableCell>
               <TableCell
                 
-                sx={{ fontWeight: "600"}}
+                sx={{ fontWeight: "500", fontSize:'15px'}}
               >
                 Action
               </TableCell>
@@ -78,17 +79,17 @@ const DisplayTeamData = ({ teams, isLoading, error }) => {
             {teams?.map((team, index) => (
               <TableRow
                 key={index}
-                sx={{ "&:last-child td, &:last-child th": { border: 0  } }}
+                sx={{ "&:last-child td, &:last-child th": { border: 0  }, '&:hover':{backgroundColor:'#e2e8f0'} }}
               >
-                <TableCell sx={{color:'var(--text-table)'}}>{index+1}</TableCell>
+                <TableCell sx={{color:'var(--text-table)', fontSize:'15px'}}>{index+1}</TableCell>
                 <TableCell component="th" scope="row">
-                  <Avatar>{team.name.substring(0, 1)}</Avatar>
+                  <Avatar alt={team.name} />
                 </TableCell>
-                <TableCell  sx={{color:'var(--text-table)'}}>{team.name}</TableCell>
-                <TableCell  sx={{color:'var(--text-table)'}}>{team.role}</TableCell>
-                <TableCell  sx={{color:'var(--text-table)'}}>{team.experience}</TableCell>
-                <TableCell  sx={{color:'var(--text-table)'}}>{team.department}</TableCell>
-                <TableCell  sx={{color:'var(--text-table)'}}>{team.email}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)', fontSize:'15px'}}>{team.name}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)', fontSize:'15px'}}>{team.role}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)', fontSize:'15px'}}>{team.experience}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)', fontSize:'15px'}}>{team.department}</TableCell>
+                <TableCell  sx={{color:'var(--text-table)', fontSize:'15px'}}>{team.email}</TableCell>
                 <TableCell  sx={{display:'flex'}}>
                   <UpdateTeam id={team.id} teams={teams}/>
                   <DeleteTeammateButton name={team.name} id={team.id}/>
@@ -98,7 +99,7 @@ const DisplayTeamData = ({ teams, isLoading, error }) => {
           </TableBody>
         </Table>
         }
-        
+        {/* <Pagination list={teams} setItems={setItems}/> */}
       </TableContainer>
   );
 };

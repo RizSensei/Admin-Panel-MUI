@@ -8,6 +8,7 @@ import { SidebarContext } from "../../context/SidebarContext";
 import IconStack from "./icon-stack/IconStack";
 import ProfileMenu from "./profile-menu/ProfileMenu";
 import SearchAutoComplete from "./searchAutoComplete/SearchAutoComplete";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const { dashtheme, toggleTheme } = useContext(DarkModeContext);
@@ -39,8 +40,8 @@ const Topbar = () => {
               <MenuIcon fontSize="large" />
             )}
           </Button>
-          <Typography sx={{ fontWeight: 600, fontSize: "20px" }}>
-            Dashboard
+          <Typography sx={{ fontSize: "20px" }}>
+            <Link to="/"  style={{ textDecoration: 'none', color:'inherit' }}>Home</Link>
           </Typography>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>

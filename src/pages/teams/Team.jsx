@@ -1,21 +1,22 @@
-import React, { useCallback, useContext, useEffect, useMemo, useReducer, useState } from "react";
-import DisplayTeamData from "./DisplayTeamData";
-import {
-  Box,
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Paper,
-  Select,
-} from "@mui/material";
-import Layout from "../../layout/Layout";
-import AddTeam from "../../components/modal/AddTeam";
+import { Box, Button, Paper } from "@mui/material";
+import axios from "axios";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useReducer,
+  useState,
+} from "react";
+import { useQuery } from "react-query";
 import SelectMapping from "../../components/mapping/SelectMapping";
+import AddTeam from "../../components/modal/AddTeam";
+import PageTitle from "../../components/pageTitle/PageTitle";
 import Search from "../../components/search/Search";
 import { DarkModeContext } from "../../context/DarkModeProvider";
-import { useQuery } from "react-query";
-import axios from "axios";
+import ExportExcel from "../../export/ExportExcel";
+import Layout from "../../layout/Layout";
+import DisplayTeamData from "./DisplayTeamData";
 
 const Team = () => {
   const departments = [
@@ -32,20 +33,25 @@ const Team = () => {
     "Software Engineer",
     "QA Tester",
     "Backend Developer",
-    "Graphic Designer"
+    "Graphic Designer",
   ];
-  const experience=["1","2","3","4","5","6","7","8","9","10"];
+  const experience = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
   const { dashtheme, toggleTheme } = useContext(DarkModeContext);
 
   const retrieveTeams = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-  
+
     const response = await axios.get("http://localhost:3000/teams");
     return response.data;
   };
 
-  const { data: teams, error, isLoading, refetch } = useQuery("teamsData", retrieveTeams, {
+  const {
+    data: teams,
+    error,
+    isLoading,
+    refetch,
+  } = useQuery("teamsData", retrieveTeams, {
     onSuccess: (data) => {
       setItems(data);
     },
@@ -54,39 +60,51 @@ const Team = () => {
   const [items, setItems] = useState(teams);
 
   const initialState = {
-    selectedRoles:'', selectedExperience:'', selectedDepartment:''
-  }
+    selectedRoles: "",
+    selectedExperience: "",
+    selectedDepartment: "",
+  };
 
-  const teamReducer = (state,action) => {
-    switch(action.type){
-      case 'SET_ROLE':
-        return {...state, selectedRoles: action.payload}
+  const teamReducer = (state, action) => {
+    switch (action.type) {
+      case "SET_ROLE":
+        return { ...state, selectedRoles: action.payload };
 
-      case 'SET_EXPERIENCE':
-        return {...state, selectedExperience: action.payload}
+      case "SET_EXPERIENCE":
+        return { ...state, selectedExperience: action.payload };
 
-      case 'SET_DEPARTMENT':
-        return {...state, selectedDepartment: action.payload}
+      case "SET_DEPARTMENT":
+        return { ...state, selectedDepartment: action.payload };
     }
-  }
+  };
 
   const [state, dispatch] = useReducer(teamReducer, initialState);
 
   const filteredTeams = useMemo(() => {
     let filterTeams = teams;
 
-    if (state.selectedRoles === "" && state.selectedExperience === ""  && state.selectedDepartment === "") {
+    if (
+      state.selectedRoles === "" &&
+      state.selectedExperience === "" &&
+      state.selectedDepartment === ""
+    ) {
       setItems(teams);
     }
 
     if (state.selectedRoles !== "") {
-      filterTeams = filterTeams.filter((team) => team.role === state.selectedRoles);
+      filterTeams = filterTeams.filter(
+        (team) => team.role === state.selectedRoles
+      );
     }
     if (state.selectedExperience !== "") {
-      filterTeams = filterTeams.filter((team) => team.experience === state.selectedExperience);
+      filterTeams = filterTeams.filter(
+        (team) => team.experience === state.selectedExperience
+      );
     }
     if (state.selectedDepartment !== "") {
-      filterTeams = filterTeams.filter((team) => team.department === state.selectedDepartment);
+      filterTeams = filterTeams.filter(
+        (team) => team.department === state.selectedDepartment
+      );
     }
 
     return filterTeams;
@@ -96,51 +114,88 @@ const Team = () => {
     setItems(filteredTeams);
   };
 
-  const handleRolesChange = useCallback((value) => {
-    dispatch({type:'SET_ROLE', payload:value})
-  }, [state.selectedRoles]);
+  const handleRolesChange = useCallback(
+    (value) => {
+      dispatch({ type: "SET_ROLE", payload: value });
+    },
+    [state.selectedRoles]
+  );
 
-  const handleExperienceChange = useCallback((value) => {
-    dispatch({type:'SET_EXPERIENCE', payload:value})
-  }, [state.selectedExperience]);
+  const handleExperienceChange = useCallback(
+    (value) => {
+      dispatch({ type: "SET_EXPERIENCE", payload: value });
+    },
+    [state.selectedExperience]
+  );
 
-  const handleDepartmentChange = useCallback((value) => {
-    dispatch({type:'SET_DEPARTMENT', payload:value})
-  }, [state.selectedDepartment]);
+  const handleDepartmentChange = useCallback(
+    (value) => {
+      dispatch({ type: "SET_DEPARTMENT", payload: value });
+    },
+    [state.selectedDepartment]
+  );
 
   useEffect(() => {
     setItems(teams);
   }, [teams]);
 
-  const handleSearch = useCallback((searchTerm) => {
-    const searchedResults = teams.filter((team) =>
-    team.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const handleSearch = useCallback(
+    (searchTerm) => {
+      const searchedResults = teams.filter((team) =>
+        team.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setItems(searchedResults);
+    },
+    [teams]
   );
-  setItems(searchedResults);
-  },[teams]);
 
   return (
     <Layout>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <PageTitle title="Team" />
+        <Box sx={{ display: "flex", columnGap:1}}>
+          <AddTeam />
+          <ExportExcel excelData={items} filename={"Employee_Report"} />
+        </Box>
+      </Box>
+
       <Box
         component={Paper}
         sx={{ display: "flex", justifyContent: "space-between", mb: 1, p: 2 }}
         className={`App ${dashtheme}`}
       >
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          <AddTeam />
-          <Search items={items} onSearch={handleSearch}/>
+          {/* <AddTeam /> */}
+          <Search items={items} onSearch={handleSearch} />
         </Box>
 
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          <SelectMapping label="Role" content={roles} onChange={handleRolesChange}/>
-          <SelectMapping label="Department" content={departments} onChange={handleDepartmentChange}/>
-          <SelectMapping label="Experience" content={experience} onChange={handleExperienceChange}/>
+          <SelectMapping
+            label="Role"
+            content={roles}
+            onChange={handleRolesChange}
+          />
+          <SelectMapping
+            label="Department"
+            content={departments}
+            onChange={handleDepartmentChange}
+          />
+          <SelectMapping
+            label="Experience"
+            content={experience}
+            onChange={handleExperienceChange}
+          />
           <Button variant="contained" size="small" onClick={filterTeams}>
             Filter
           </Button>
         </Box>
       </Box>
-      <DisplayTeamData teams={items} isLoading={isLoading} error={error} />
+      <DisplayTeamData
+        teams={items}
+        isLoading={isLoading}
+        error={error}
+        setItems={setItems}
+      />
     </Layout>
   );
 };

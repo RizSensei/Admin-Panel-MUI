@@ -1,4 +1,6 @@
 import {
+  Avatar,
+  AvatarGroup,
   Box,
   Card,
   CardActionArea,
@@ -60,7 +62,7 @@ const DisplayProjects = ({projects, isLoading, error}) => {
                       ? "#6d28d9"
                       : "",
                   backgroundColor: "white",
-                  fontWeight:'600'
+                  fontWeight:'500'
                 }}
               />
               <Typography variant="body2" color="text.secondary" sx={{mt:1}}>
@@ -72,17 +74,12 @@ const DisplayProjects = ({projects, isLoading, error}) => {
             <CardContent>
               <Typography>Team</Typography>
               <Box sx={{ display: "flex", columnGap: 1 }}>
-                {project.team?.map((member, index) => (
-                  <Chip
-                    key={index}
-                    label={member}
-                    size="small"
-                    sx={{
-                      backgroundColor: "gray",
-                      color: "white",
-                    }}
-                  />
+                <AvatarGroup max={4}>
+                  {project.team?.map((member, index) => (
+                  <Avatar key={index} size="small">{member.substring(0, 1)}</Avatar>
                 ))}
+                </AvatarGroup>
+                
               </Box>
             </CardContent>
           </CardActionArea>

@@ -26,6 +26,7 @@ const Search = ({ onSearch }) => {
         size="small"
         variant="outlined"
         value={searchedItem}
+        placeholder="Search..."
         onChange={handleChange}
         InputProps={{
           startAdornment: (

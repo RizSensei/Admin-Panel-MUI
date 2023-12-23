@@ -1,7 +1,12 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
-
+import FolderIcon from "@mui/icons-material/Folder";
+import GroupsIcon from "@mui/icons-material/Groups";
+import PersonIcon from "@mui/icons-material/Person";
+import EmailIcon from "@mui/icons-material/Email";
+import theme from "../../../theme/theme";
+import { Link } from "react-router-dom";
 
 const Data = () => {
   return (
@@ -10,106 +15,168 @@ const Data = () => {
         <Grid item xs={6}>
           <Box
             sx={{
-              backgroundColor: "white",
-              p: 4,
+              backgroundColor: "#17a2b8",
+              color: "white",
               borderRadius: "5px",
-              display: "flex",
-              alignItems: "center",
               columnGap: 2,
-              boxShadow: 2
+              boxShadow: 2,
             }}
           >
-            <Box>
-              <Typography sx={{ fontSize: "20px" }}>
-                Total Clients
-              </Typography>
-              <Typography variant="h5" fontWeight={800}>
-                68
-              </Typography>
+            <Box sx={{ display: "flex", alignItems: "center",justifyContent:'space-around', px: 4, pt: 4 }}>
+              <Box>
+                <Typography sx={{ fontSize: "20px" }}>Total Clients</Typography>
+                <Typography variant="h5" fontWeight={500}>
+                  68
+                </Typography>
+              </Box>
+              <Box>
+                <PersonIcon
+                  sx={{ height: "75px", width: "75px", color: "white" }}
+                />
+              </Box>
             </Box>
-            <Box>
-              <img src="./images/pie-chart.png" alt="" height={75} width={75} />
-            </Box>
+            <Link
+              to="/clients"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Box
+                sx={{
+                  pt: 2,
+                  backgroundColor: "#1591a5",
+                  display: "flex",
+                  justifyContent: "center",
+                  pb: 1,
+                }}
+              >
+                <Typography sx={{ "&:hover": { scale: "1.1" } }}>
+                  More info
+                </Typography>
+              </Box>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6}>
           <Box
             sx={{
-              backgroundColor: "white",
-              p: 4,
+              backgroundColor: "rgb(255,193,7)",
+              color: "white",
               borderRadius: "5px",
-              display: "flex",
-              alignItems: "center",
               columnGap: 2,
-              boxShadow: 2
+              boxShadow: 2,
             }}
           >
-            <Box sx={{ display:"flex",flexDirection:"column",rowGap: 1.5, width:'100%' }}>
-              <Typography sx={{ fontSize: "20px" }}>Target Clients</Typography>
-              <LinearProgress
-                variant="determinate"
-                value={50}
-                sx={{ width: "100%" }}
-              />
-              <Typography sx={{fontSize:'13px'}}>32 left from target</Typography>
+            <Box sx={{ display: "flex", alignItems: "center",justifyContent:'space-around', px: 4, pt: 4 }}>
+              <Box>
+                <Typography sx={{ fontSize: "20px" }}>Total Emails</Typography>
+                <Typography variant="h5" fontWeight={500}>
+                  68
+                </Typography>
+              </Box>
+              <Box>
+                <EmailIcon
+                  sx={{ height: "75px", width: "75px", color: "white" }}
+                />
+              </Box>
             </Box>
-            <Box></Box>
+            <Link
+              to="/email"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Box
+                sx={{
+                  pt: 2,
+                  backgroundColor: "rgb(229,173,6)",
+                  display: "flex",
+                  justifyContent: "center",
+                  pb: 1,
+                }}
+              >
+                <Typography sx={{ "&:hover": { scale: "1.1" } }}>
+                  More info
+                </Typography>
+              </Box>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6}>
-        <Box
+          <Box
             sx={{
-              backgroundColor: "white",
-              p: 4,
+              backgroundColor: "#28a745",
+              color: "white",
               borderRadius: "5px",
-              display: "flex",
-              alignItems: "center",
               columnGap: 2,
-              boxShadow: 2
+              boxShadow: 2,
             }}
           >
-            <Box>
-            <Typography variant="h5" fontWeight={800}>
-                20
-              </Typography>
-              <Typography sx={{ fontSize: "20px" }}>
-                Total Members
-              </Typography>
-              <Typography sx={{ fontSize: "13px" }}>
-                -2% than last month
-              </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent:'space-around',
+                px: 4, pt:4
+              }}
+            >
+              <Box>
+                <Typography variant="h5" fontWeight={500}>
+                  20
+                </Typography>
+                <Typography sx={{ fontSize: "20px" }}>Total Members</Typography>
+              </Box>
+              <Box>
+                <GroupsIcon
+                  sx={{ height: "75px", width: "75px", color: "white" }}
+                />
+              </Box>
             </Box>
-            <Box>
-              <img src="./images/bar-graph.png" alt="" height={75} width={75} />
-            </Box>
+            <Link to="/team" style={{textDecoration:'none', color:'white'}}>
+              <Box sx={{ pt: 2, backgroundColor:'#24963e', display:'flex', justifyContent:'center', pb:1 }}>
+                <Typography sx={{'&:hover':{scale: '1.1'}}}>More info</Typography>
+              </Box>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6}>
-        <Box
+          <Box
             sx={{
-              backgroundColor: "white",
-              p: 4,
+              backgroundColor: "#dc3545",
+              color: "white",
               borderRadius: "5px",
-              display: "flex",
-              alignItems: "center",
               columnGap: 2,
-              boxShadow: 2
+              boxShadow: 2,
             }}
           >
-            <Box>
-            <Typography variant="h5" fontWeight={800}>
+            <Box sx={{ display: "flex",
+              alignItems: "center", justifyContent:'space-around',px:4,pt:4}}>
+              <Box>
+              <Typography variant="h5" fontWeight={500}>
                 15
               </Typography>
-              <Typography sx={{ fontSize: "20px" }}>
-                Total Projects
-              </Typography>
-              <Typography sx={{ fontSize: "13px" }}>
-                +2% than last month
-              </Typography>
+              <Typography sx={{ fontSize: "20px" }}>Total Projects</Typography>
             </Box>
             <Box>
-              <img src="./images/bar-graph.png" alt="" height={75} width={75} />
+              <FolderIcon
+                sx={{ height: "75px", width: "75px", color: "white" }}
+              />
             </Box>
+            </Box>
+            <Link
+              to="/projects"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Box
+                sx={{
+                  pt: 2,
+                  backgroundColor: "#c6303e",
+                  display: "flex",
+                  justifyContent: "center",
+                  pb: 1,
+                }}
+              >
+                <Typography sx={{ "&:hover": { scale: "1.1" } }}>
+                  More info
+                </Typography>
+              </Box>
+            </Link>
           </Box>
         </Grid>
       </Grid>

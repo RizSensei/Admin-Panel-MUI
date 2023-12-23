@@ -6,6 +6,8 @@ import { Box, Button, Paper } from "@mui/material";
 import Search from "../../components/search/Search";
 import SelectMapping from "../../components/mapping/SelectMapping";
 import DisplayEmailData from "./DisplayEmailData";
+import PageTitle from "../../components/pageTitle/PageTitle";
+import ExportExcel from "../../export/ExportExcel";
 
 const EmailPage = () => {
   const type = ["Primary", "Promotion", "Forum", "Socials", "Spam"];
@@ -13,7 +15,7 @@ const EmailPage = () => {
   const [emailType, setEmailType] = useState("");
   const handleEmailTypeChange = useCallback((value) => {
     setEmailType(value);
-  },[]);
+  }, []);
 
   const retrieveEmails = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -52,11 +54,13 @@ const EmailPage = () => {
     }
 
     if (emailType !== "") {
-      filteredEmails = filteredEmails.filter((email) => email.type.toLowerCase() === emailType.toLowerCase());
+      filteredEmails = filteredEmails.filter(
+        (email) => email.type.toLowerCase() === emailType.toLowerCase()
+      );
     }
 
     return filteredEmails;
-  }, [emails, emailType ]);
+  }, [emails, emailType]);
 
   const filterEmails = () => {
     setItems(filteredEmails);
@@ -70,6 +74,10 @@ const EmailPage = () => {
 
   return (
     <Layout>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <PageTitle title="Email" />
+        <ExportExcel excelData={items} filename={"Email_Report"} />
+      </Box>
       <Box
         component={Paper}
         sx={{ display: "flex", justifyContent: "space-between", mb: 2, p: 2 }}
@@ -84,11 +92,7 @@ const EmailPage = () => {
             content={type}
             onChange={handleEmailTypeChange}
           />
-          <Button
-            variant="contained"
-            size="small"
-              onClick={filterEmails}
-          >
+          <Button variant="contained" size="small" onClick={filterEmails}>
             Filter
           </Button>
           <Button
@@ -101,7 +105,7 @@ const EmailPage = () => {
           </Button>
         </Box>
       </Box>
-      <DisplayEmailData emails={items} isLoading={isLoading} error={error}/>
+      <DisplayEmailData emails={items} isLoading={isLoading} error={error} />
     </Layout>
   );
 };

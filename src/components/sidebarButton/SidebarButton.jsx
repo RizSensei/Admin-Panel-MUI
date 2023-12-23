@@ -3,7 +3,12 @@ import React, { useCallback, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import { PageTitleContext } from "../../context/PageTitleContext";
 
-const SidebarButton = ({ icon: IconComponent, title, route, isTitleHidden }) => {
+const SidebarButton = ({
+  icon: IconComponent,
+  title,
+  route,
+  isTitleHidden,
+}) => {
   const navigate = useNavigate();
   // const { setPageTitle } = useContext(PageTitleContext);
 
@@ -18,22 +23,22 @@ const SidebarButton = ({ icon: IconComponent, title, route, isTitleHidden }) => 
       onClick={handleClick}
       type="button"
       variant="outlined"
-      startIcon={<IconComponent sx={{ fontWeight: '600', color: 'gray' }} />}
+      startIcon={<IconComponent sx={{ fontWeight: "600", color: "gray" }} />}
       sx={{
         color: "white",
         py: 2,
+        pl: 3,
         width: "100%",
         display: "flex",
         justifyContent: "flex-start",
         "&:hover": { backgroundColor: "#334155" },
       }}
     >
-      <Typography sx={{ fontWeight: '500', textTransform: 'none' }}>
+      <Typography sx={{ fontWeight: "500", textTransform: "none" }}>
         {!isTitleHidden && title}
       </Typography>
     </Button>
   );
 };
-
 
 export default SidebarButton;

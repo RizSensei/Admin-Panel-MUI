@@ -51,13 +51,12 @@ const Sidebar = () => {
         cursor: "pointer",
       }}
     >
-      <Link to = "/">
+      <Link to = "/" style={{ textDecoration: 'none' }}>
          <Box
         sx={{
           display: "flex",
           columnGap: 0.5,
           py: 1,
-          textDecoration:'none'
         }}
       >
         <Button>

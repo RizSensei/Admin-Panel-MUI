@@ -84,10 +84,10 @@ const LoginAdmin = () => {
                 f
               </Avatar>
               <Box>
-                <Typography variant="h4" sx={{ fontWeight: "600" }}>
+                <Typography variant="h4" sx={{ fontWeight: "500" }}>
                   .fillow
                 </Typography>
-                <Typography sx={{ fontWeight: "600", fontSize: "10px" }}>
+                <Typography sx={{ fontWeight: "500", fontSize: "10px" }}>
                   Rizen Admin Dashboard
                 </Typography>
               </Box>
