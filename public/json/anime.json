@@ -1,0 +1,1080 @@
+{
+  "animes": [
+    {
+      "id": 1,
+      "name": "Dead Mount Dead Play",
+      "score": 2,
+      "genre": "Action, Fantasy, Seinen, Supernatural, Thriller",
+      "imageUrl": "https://i.pinimg.com/564x/c5/75/2b/c5752bac162fd34a59781ca1ec48ee65.jpg",
+      "studio": "GEEK TOYS",
+      "status": "watching"
+    },
+    {
+      "id": 2,
+      "name": "Zom 100: Bucket List of the Dead",
+      "score": 4,
+      "genre": "Action, Comedy, Horror, Seinen, Shounen, Supernatural, Suspense",
+      "studio": "BUG FILMS",
+      "imageUrl": "https://i.pinimg.com/564x/f1/c2/11/f1c211017618f5f85610710964402ce8.jpg",
+      "status": "watching"
+    },
+    {
+      "id": 3,
+      "name": "Jujutsu Kaisen",
+      "score": 5,
+      "genre": "Action, Drama, Fantasy, School, Shounen, Super Power, Supernatural, Demons",
+      "imageUrl": "https://i.pinimg.com/564x/2e/af/26/2eaf2653f39ace7d6eaa183177932012.jpg",
+      "studio": "MAPPA",
+      "status": "watching"
+    },
+    {
+      "id": 4,
+      "name": "Watashi no Shiawase na Kekkon; My Happy Marriage",
+      "score": 3,
+      "genre": "Drama, Fantasy, Military, Romance, Shoujo, Super Power, Supernatural",
+      "imageUrl": "https://i.pinimg.com/564x/96/0f/d0/960fd0a8d188a16815d217700b12520c.jpg",
+      "studio": "Kinema Citrus",
+      "status": "watching"
+    },
+    {
+      "id": 5,
+      "name": "Undead Unluck",
+      "score": 5,
+      "genre": " Action, Comedy, Martial Arts, Sci-Fi, Shounen, Super Power, Supernatural",
+      "imageUrl": "https://i.pinimg.com/564x/9d/69/b1/9d69b140f2916cdea2888e5eb1be67d9.jpg",
+      "studio": "David Production",
+      "status": "watching"
+    },
+    {
+      "id": 6,
+      "name": "Rokudenashi Majutsu Koushi to Akashic Records",
+      "score": 3,
+      "genre": "Action, Comedy, Fantasy, School, Magic",
+      "imageUrl": "https://i.pinimg.com/564x/fa/9b/7a/fa9b7a94edc2ea474926d680d8daebb6.jpg",
+      "studio": "LIDENFILMS",
+      "status": "completed"
+    },
+    {
+      "name": "Grand Blue Dreaming",
+      "genre": " Comedy, Seinen, Slice of Life, Sports, Isekai ",
+      "studio": "Zero-G",
+      "imageUrl": "https://i.pinimg.com/564x/72/62/ac/7262ac82762bfa8d25ba0a10aabf49ff.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 7
+    },
+    {
+      "name": "Satsuriku no Tenshi",
+      "genre": " Action, Adventure, Horror, Psychological, Thriller, Suspense ",
+      "studio": " J.C.Staff ",
+      "imageUrl": "https://i.pinimg.com/564x/cd/5a/ef/cd5aef468f8cab21640e965aac24a132.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 8
+    },
+    {
+      "name": "Akame ga Kill!",
+      "genre": "Action, Adventure, Drama, Fantasy, Horror, Psychological, Shounen, Super Power, Thriller, Demons",
+      "studio": "White Fox",
+      "imageUrl": "https://i.pinimg.com/564x/7a/12/84/7a1284c6721036558d61d42a89b60f3f.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 9
+    },
+    {
+      "name": "Jigokuraku",
+      "genre": "Action, Adventure, Fantasy, Martial Arts, Mystery, Shounen, Super Power, Supernatural",
+      "studio": "MAPPA",
+      "imageUrl": "https://i.pinimg.com/564x/3e/5b/77/3e5b77336f56fad7bf7fda1bc3ad30ab.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 10
+    },
+    {
+      "name": "MASHLE: MAGIC AND MUSCLES",
+      "genre": "Action, Comedy, Fantasy, Parody, School, Shounen, Super Power, Magic",
+      "studio": "A-1 Pictures",
+      "imageUrl": "https://i.pinimg.com/564x/91/f9/5d/91f95d4457a15604c7c1006dfef6d99a.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 11
+    },
+    {
+      "name": "Yofukashi no Uta",
+      "genre": "Comedy, Psychological, Romance, School, Shounen, Slice of Life, Supernatural, Vampire",
+      "studio": "LIDENFILMS",
+      "imageUrl": "https://i.pinimg.com/564x/4f/18/df/4f18df6d7e20163e400003a37613375f.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 12
+    },
+    {
+      "name": "Go-toubun no Hanayome",
+      "genre": "Comedy, Drama, Harem, Romance, School, Shounen, Slice of Life",
+      "studio": "Tezuka Productions",
+      "imageUrl": "https://i.pinimg.com/564x/21/ed/1d/21ed1d83a5005bdd2e46206b46a12747.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 13
+    },
+    {
+      "name": "Kobayashi-san Chi no Maidragon",
+      "genre": "Comedy, Fantasy, Seinen, Slice of Life, Isekai, Magic",
+      "studio": "Kyoto Animation",
+      "imageUrl": "https://i.pinimg.com/564x/d5/bc/11/d5bc11e66c85420679aa7788455bad8c.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 14
+    },
+    {
+      "name": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
+      "genre": " Comedy, Ecchi, Fantasy, Harem, Super Power, Isekai, Demons, Magic",
+      "studio": "Ajia-Do",
+      "imageUrl": "https://i.pinimg.com/564x/d8/9f/63/d89f63849394f2508cbcaa6bf83e2253.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 15
+    },
+    {
+      "name": "Dark Gathering",
+      "genre": "Horror, Shounen, Supernatural",
+      "studio": "OLM",
+      "imageUrl": "https://i.pinimg.com/564x/84/59/99/8459991e535c225bb626e52cf504e8b0.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 16
+    },
+    {
+      "name": "Asobi Asobase",
+      "genre": " Comedy, Parody, School, Seinen, Slice of Life",
+      "studio": "Lerche",
+      "imageUrl": "https://i.pinimg.com/564x/da/b3/54/dab35477317fb9e3e4df36fb424bb41e.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 17
+    },
+    {
+      "name": "GOBLIN SLAYER",
+      "genre": "Action, Adventure, Fantasy, Magic",
+      "studio": "White Fox",
+      "imageUrl": "https://i.pinimg.com/564x/91/05/71/9105715de07067262c0114707c3f41ec.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 18
+    },
+    {
+      "name": "Boku no Tonari ni Ankoku Hankaishin ga Imasu",
+      "genre": " Comedy, Josei, School, Slice of Life",
+      "studio": "EMT Squared",
+      "imageUrl": "https://i.pinimg.com/564x/64/d9/c1/64d9c1ac518179c3e59130b544bb4239.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 19
+    },
+    {
+      "name": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+      "genre": "Action, Adventure, Comedy, Fantasy, Romance, Isekai, Magic",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/76/b2/54/76b2545fb481af1ae5410aac702ac154.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 20
+    },
+    {
+      "name": "Genjitsu shugi yuusha no oukoku saikenki ",
+      "genre": "Action, Adventure, Fantasy, Harem, Military, Romance, Isekai, Magic",
+      "studio": " J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/64/08/ca/6408caf9adda1249ea86bcdc96846465.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 21
+    },
+    {
+      "name": "Harukana Receive",
+      "genre": "Ecchi, Seinen, Slice of Life, Sports",
+      "studio": "C2C",
+      "imageUrl": "https://i.pinimg.com/564x/43/1e/42/431e4283788b23e74f4825fb81884565.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 22
+    },
+    {
+      "name": "Kinsou no Vermeil: Gakeppuchi Majutsushi wa Saikyou no Yakusai to Mahou Sekai wo Tsuki Susumu",
+      "genre": "Ecchi, Fantasy, Romance, School, Shounen, Demons, Magic",
+      "studio": " Staple Entertainment",
+      "imageUrl": "https://i.pinimg.com/564x/7c/80/16/7c80163f5ac9c97d2bf228d85fc05713.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 23
+    },
+    {
+      "name": "Yuragi-sou no Yuuna-san",
+      "genre": "Comedy, Ecchi, Harem, Romance, School, Shounen, Supernatural",
+      "studio": "Xebec",
+      "imageUrl": "https://i.pinimg.com/564x/2b/cc/92/2bcc925c36bfceb2709a877908d4f159.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 24
+    },
+    {
+      "name": "ONE PIECE",
+      "genre": "Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power",
+      "studio": " Toei Animation",
+      "imageUrl": "https://i.pinimg.com/564x/7c/59/ae/7c59aedbb1145ebaeb427976084ae4c0.jpg",
+      "status": "watching",
+      "score": 3,
+      "id": 25
+    },
+    {
+      "name": "SPY x FAMILY",
+      "genre": " Action, Comedy, School, Shounen, Slice of Life, Supernatural",
+      "studio": "CloverWorks",
+      "imageUrl": "https://i.pinimg.com/564x/56/a8/78/56a878b25f5f75cea9304ad59f6b04da.jpg",
+      "status": "watching",
+      "score": 3,
+      "id": 26
+    },
+    {
+      "name": "Rurouni Kenshin",
+      "genre": "Action, Adventure, Drama, Martial Arts, Romance, Shounen",
+      "studio": "LIDENFILMS",
+      "imageUrl": "https://i.pinimg.com/564x/01/f4/8d/01f48d1cf5fb18e3a99421c7c6ce0f91.jpg",
+      "status": "paused",
+      "score": 2,
+      "id": 27
+    },
+    {
+      "name": "Shuumatsu no Valkyrie",
+      "genre": "Action, Drama, Fantasy, Martial Arts, Seinen, Supernatural",
+      "studio": "Graphinica",
+      "imageUrl": "https://i.pinimg.com/564x/2e/71/6f/2e716f9b59ef3f572eb24b3683d21124.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 28
+    },
+    {
+      "name": "Tokyo Revengers: Tenjiku-hen",
+      "genre": "Action, Drama, Romance, Shounen, Supernatural",
+      "studio": "LIDENFILMS",
+      "imageUrl": "https://i.pinimg.com/564x/a6/fd/21/a6fd210e3c778f35426d37b79ec5c6f2.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 29
+    },
+    {
+      "name": "BLEACH: Sennen Kessen-hen - Ketsubetsu-tan",
+      "genre": "Action, Adventure, Fantasy, Shounen, Super Power, Supernatural",
+      "studio": "Pierrot",
+      "imageUrl": "https://i.pinimg.com/564x/b7/93/87/b793874692052d5778fde8a6ce2063fa.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 30
+    },
+    {
+      "name": "Kimetsu no Yaiba",
+      "genre": "Action, Adventure, Drama, Fantasy, Shounen, Super Power, Supernatural, Demons",
+      "studio": "ufotable",
+      "imageUrl": "https://i.pinimg.com/564x/8d/7d/f6/8d7df6791c48ec6878c9e44ef320c909.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 31
+    },
+    {
+      "name": "Boku no Kokoro no Yabai Yatsu",
+      "genre": "Comedy, Romance, School, Shounen, Slice of Life",
+      "studio": "Shin-Ei Animation",
+      "imageUrl": "https://i.pinimg.com/564x/a8/16/80/a816800183f6a70b504bef35aba84c03.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 32
+    },
+    {
+      "name": "Komi-san wa, Komyushou desu",
+      "genre": "Comedy, Romance, School, Shounen, Slice of Life",
+      "studio": "OLM",
+      "imageUrl": "https://i.pinimg.com/564x/b5/af/e8/b5afe8e83f62b71f2de47c9758e3b1b3.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 33
+    },
+    {
+      "name": "Ousama Ranking: Yuuki no Takarabako",
+      "genre": "Action, Adventure, Drama, Fantasy, Seinen, Demons, Magic",
+      "studio": "Wit Studio",
+      "imageUrl": "https://i.pinimg.com/564x/5a/a8/a0/5aa8a03d3728858ef988b66a59e0997a.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 34
+    },
+    {
+      "name": "Boku no Hero Academia",
+      "genre": "Action, Adventure, Comedy, School, Shounen, Super Power",
+      "studio": "Bones",
+      "imageUrl": "https://i.pinimg.com/564x/b4/11/62/b41162a6db19dba168d7831dde45f4e4.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 35
+    },
+    {
+      "name": "BLUELOCK",
+      "genre": "Action, Drama, Shounen, Sports, Super Power",
+      "studio": "8bit",
+      "imageUrl": "https://i.pinimg.com/564x/3d/5b/a4/3d5ba4d525e6432e494eb15dacc8f741.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 36
+    },
+    {
+      "name": "Nanatsu no Taizai: Imashime no Fukkatsu",
+      "genre": " Action, Adventure, Comedy, Ecchi, Fantasy, Martial Arts, Shounen, Super Power, Supernatural, Isekai, Demons, Magic",
+      "studio": "A-1 Pictures",
+      "imageUrl": "https://i.pinimg.com/564x/8c/5a/ad/8c5aadb80bafbe2d0ddee7da9b1580f9.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 37
+    },
+    {
+      "name": "Gintama",
+      "genre": "Action, Comedy, Drama, Parody, Sci-Fi, Shounen, Space",
+      "studio": "Sunrise",
+      "imageUrl": "https://i.pinimg.com/564x/e4/77/cb/e477cbc540fdd205d91e87b08b332933.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 38
+    },
+    {
+      "name": "Black Clover",
+      "genre": "Action, Adventure, Comedy, Fantasy, Shounen, Super Power, Demons, Magic",
+      "studio": "Pierrot",
+      "imageUrl": "https://i.pinimg.com/564x/54/55/e8/5455e8f546b7a2d1a2579532863d53b2.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 39
+    },
+    {
+      "name": "Shokugeki no Souma",
+      "genre": "Comedy, Drama, Ecchi, School, Shounen, Super Power, Gourmet",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/a3/28/eb/a328ebab72a9a4210f8e172fc65a28fb.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 40
+    },
+    {
+      "name": "High School DxD Hero",
+      "genre": " Action, Comedy, Ecchi, Fantasy, Harem, Romance, School, Super Power, Demons",
+      "studio": "Passione",
+      "imageUrl": "https://i.pinimg.com/564x/98/c7/fd/98c7fd3ec33cdb67bbb1090884ad18ea.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 41
+    },
+    {
+      "name": "HINAMATSURI",
+      "genre": "Comedy, School, Sci-Fi, Seinen, Slice of Life, Super Power, Supernatural, Isekai",
+      "studio": "Feel.",
+      "imageUrl": "https://i.pinimg.com/564x/e1/f2/f3/e1f2f3265879809d076b6244ce9fd604.jpg",
+      "status": "completed",
+      "score": 0,
+      "id": 42
+    },
+    {
+      "name": "Inazuma Eleven",
+      "genre": "Kids, School, Sports, Super Power",
+      "studio": "OLM",
+      "imageUrl": "https://i.pinimg.com/564x/e6/c6/c2/e6c6c2e4600db2f8713882f0bf55fe3a.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 43
+    },
+    {
+      "name": "Hataraku Saibou",
+      "genre": "Action, Comedy, Sci-Fi, Shounen, Demons",
+      "studio": "David Production",
+      "imageUrl": "https://i.pinimg.com/564x/91/86/fa/9186faf9d27280927953a1d987ad4586.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 44
+    },
+    {
+      "name": "Free! Dive to the Future",
+      "genre": "Comedy, Drama, School, Slice of Life, Sports",
+      "studio": "Kyoto Animation",
+      "imageUrl": "https://i.pinimg.com/564x/14/be/58/14be58e9211bd3ea420c703961121432.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 45
+    },
+    {
+      "name": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "genre": "Comedy, Drama, Mystery, Psychological, Romance, School, Supernatural",
+      "studio": "CloverWorks",
+      "imageUrl": "https://i.pinimg.com/564x/a8/57/3c/a8573cf3672fd00d1c081bc6b9531655.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 46
+    },
+    {
+      "name": "Kishuku Gakkou no Juliet",
+      "genre": "Action, Comedy, Parody, Romance, School, Shounen",
+      "studio": "LIDENFILMS",
+      "imageUrl": "https://i.pinimg.com/564x/fe/05/4e/fe054edc6ffa09a509be7117d855487f.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 47
+    },
+    {
+      "name": "Fairy Tail",
+      "genre": "Action, Adventure, Comedy, Fantasy, Shounen, Super Power, Demons, Magic",
+      "studio": "A-1 Pictures",
+      "imageUrl": "https://i.pinimg.com/564x/37/01/78/3701783477cd0395091db613c906d64a.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 48
+    },
+    {
+      "name": "SSSS.GRIDMAN",
+      "genre": "Action, Mecha, School, Sci-Fi, Super Power",
+      "studio": "Mainichi",
+      "imageUrl": "https://i.pinimg.com/564x/43/f6/fc/43f6fcddcda96161c6e79e2fd4f0dc75.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 49
+    },
+    {
+      "name": "RADIANT",
+      "genre": "Action, Adventure, Comedy, Fantasy, Demons, Magic",
+      "studio": "Lerche",
+      "imageUrl": "https://i.pinimg.com/564x/c5/32/8c/c5328c4f6237d64ba1a0217e5ac92aed.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 50
+    },
+    {
+      "name": "Kaze ga Tsuyoku Fuiteiru",
+      "genre": "Drama, Sports",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/78/8a/df/788adf8e5c387e6c00d151f2edd93ccb.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 51
+    },
+    {
+      "name": "Tensei Shitara Slime Datta Ken",
+      "genre": "Action, Adventure, Comedy, Fantasy, Super Power, Isekai, Demons, Magic",
+      "studio": "8bit",
+      "imageUrl": "https://i.pinimg.com/564x/2f/26/06/2f26064a84873e5f1c4d58d301329587.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 52
+    },
+    {
+      "name": "Kakegurui xx",
+      "genre": "Drama, Mystery, Psychological, School, Shounen",
+      "studio": "MAPPA",
+      "imageUrl": "https://i.pinimg.com/564x/b6/e7/37/b6e737830c8b16a3524caff21cf3b959.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 53
+    },
+    {
+      "name": "One-Punch Man",
+      "genre": "Action, Comedy, Martial Arts, Parody, Sci-Fi, Seinen, Super Power, Supernatural",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/c4/cf/7d/c4cf7dc3ed717b8b847fbf761d3607c3.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 54
+    },
+    {
+      "name": "Ansatsu Kyoushitsu",
+      "genre": "Action, Comedy, Drama, Military, School, Shounen, Super Power, Supernatural",
+      "studio": "Lerche",
+      "imageUrl": "https://i.pinimg.com/564x/cc/23/bf/cc23bf5ce97916850ea4f97ee51af468.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 55
+    },
+    {
+      "name": "Saijaku Muhai no Bahamut",
+      "genre": "Action, Ecchi, Fantasy, Harem, Mecha, Romance, School, Supernatural",
+      "studio": "Lerche",
+      "imageUrl": "https://i.pinimg.com/564x/17/52/a4/1752a477704a24d3927e85d1c228e3f0.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 56
+    },
+    {
+      "name": "Musaigen no Phantom World",
+      "genre": "Action, Comedy, Ecchi, Fantasy, Harem, School, Slice of Life, Super Power, Supernatural",
+      "studio": "Kyoto Animation",
+      "imageUrl": "https://i.pinimg.com/564x/50/82/e7/5082e7fa7576690ca780713b29559f8d.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 57
+    },
+    {
+      "name": "Dagashi Kashi",
+      "genre": "Comedy, Shounen, Slice of Life, Gourmet",
+      "studio": "Feel.",
+      "imageUrl": "https://i.pinimg.com/564x/22/8f/cc/228fcc80054b7cb7dde4dc23b789b7c7.jpg",
+      "status": "planning",
+      "score": 0,
+      "id": 58
+    },
+    {
+      "name": "World Trigger",
+      "genre": "Action, Sci-Fi, Shounen, Space, Isekai",
+      "studio": "Toei Animation",
+      "imageUrl": "https://i.pinimg.com/564x/8e/21/74/8e21747ba2cb9d598392071d0abe3375.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 59
+    },
+    {
+      "name": "Dimension W",
+      "genre": "Action, Sci-Fi, Seinen",
+      "studio": "Orange",
+      "imageUrl": "https://i.pinimg.com/564x/ab/6a/8f/ab6a8ffbc285a472d18c643a4c3e822e.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 60
+    },
+    {
+      "name": "Divine Gate",
+      "genre": "Action, Fantasy, Sci-Fi, Super Power",
+      "studio": "Pierrot",
+      "imageUrl": "https://i.pinimg.com/564x/ac/9f/a9/ac9fa9f2fccbdcc02b593831e512ff94.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 61
+    },
+    {
+      "name": "Diamond no Ace",
+      "genre": "School, Shounen, Sports",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/d5/a5/79/d5a5792146c373eb95be0a52fa859f4f.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 62
+    },
+    {
+      "name": "Gakusen Toshi Asterisk",
+      "genre": "Action, Comedy, Ecchi, Fantasy, Harem, Romance, School, Sci-Fi, Magic",
+      "studio": " A-1 Pictures",
+      "imageUrl": "https://i.pinimg.com/564x/a8/4a/11/a84a110549bea99eb400c6d496a662eb.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 63
+    },
+    {
+      "name": "Bungo Stray Dogs",
+      "genre": "Action, Comedy, Mystery, Seinen, Super Power, Supernatural",
+      "studio": "Bones",
+      "imageUrl": "https://i.pinimg.com/564x/dc/9b/7c/dc9b7c3f42c5adbb5d86f522c023b036.jpg",
+      "status": "paused",
+      "score": 2,
+      "id": 64
+    },
+    {
+      "name": "Sousei no Onmyouji",
+      "genre": "Action, Adventure, Comedy, Drama, Fantasy, Romance, Shounen, Supernatural, Demons, Magic",
+      "studio": "Pierrot",
+      "imageUrl": "https://i.pinimg.com/564x/cc/ae/78/ccae781f71dba29dc6c036c831441f02.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 65
+    },
+    {
+      "name": "Orange",
+      "genre": "Drama, Romance, School, Sci-Fi, Shoujo, Super Power, Supernatural",
+      "studio": "Telecom Animation Film",
+      "imageUrl": "https://i.pinimg.com/564x/0c/2b/c5/0c2bc59778fd60a3783c4146a755cc0b.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 66
+    },
+    {
+      "name": "Taboo-Tattoo",
+      "genre": "Action, Comedy, Ecchi, Martial Arts, Mystery, Seinen, Super Power, Supernatural",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/20/2e/45/202e45f22bf639aef011ff544815abbc.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 67
+    },
+    {
+      "name": "SERVAMP",
+      "genre": "Action, Fantasy, Josei, School, Shoujo, Super Power, Supernatural, Vampire",
+      "studio": "Frontier Works",
+      "imageUrl": "https://i.pinimg.com/564x/a6/9d/7f/a69d7ff10e744b691abd4974b8a04283.jpg",
+      "status": "completed",
+      "score": 0,
+      "id": 68
+    },
+    {
+      "name": "Isekai wa Smartphone to Tomo ni",
+      "genre": "Adventure, Comedy, Fantasy, Harem, Romance, Isekai, Magic",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/69/ce/de/69cede4052b573540452ba730016a401.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 69
+    },
+    {
+      "name": "Fullmetal Alchemist: Brotherhood",
+      "genre": "Action, Adventure, Drama, Fantasy, Military, Shounen, Super Power, Demons",
+      "studio": "Bones",
+      "imageUrl": "https://i.pinimg.com/564x/6c/3b/64/6c3b648b74e67f8d6d2f5fc0a8f822c3.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 70
+    },
+    {
+      "name": "Metal Fight Beyblade",
+      "genre": "Adventure, Comedy, Kids, Sports\nMAL: 6.87 by 59,023 reviews\nDuration: 25 min\nEpisodes: 51\nStudios: Tatsunoko Production\nPro",
+      "studio": "Tatsunoko Production",
+      "imageUrl": "https://i.pinimg.com/736x/e2/e9/62/e2e96221dd6381c315a6f53cc367b227.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 71
+    },
+    {
+      "name": "Angel Beats!",
+      "genre": "Action, Comedy, Drama, School, Supernatural",
+      "studio": "P.A. Works",
+      "imageUrl": "https://i.pinimg.com/564x/ae/55/19/ae5519ce3034ad2f7c362641203bbd8b.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 72
+    },
+    {
+      "name": "Ichiban Ushiro no Daimaou",
+      "genre": "Action, Comedy, Ecchi, Fantasy, Harem, School, Demons, Magic",
+      "studio": "Artland",
+      "imageUrl": "https://i.pinimg.com/564x/57/53/d8/5753d81889d3122c5129fac6f30efb52.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 73
+    },
+    {
+      "name": "Highschool of the Dead",
+      "genre": "Action, Drama, Ecchi, Horror, Romance, School, Shounen, Supernatural",
+      "studio": "Madhouse",
+      "imageUrl": "https://i.pinimg.com/564x/cb/95/ab/cb95abd935b80c1b0e9cc2dbe7720595.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 74
+    },
+    {
+      "name": "K-ON!!",
+      "genre": "Comedy, Music, School, Seinen, Slice of Life, Iyashikei",
+      "studio": "Kyoto Animation",
+      "imageUrl": "https://i.pinimg.com/736x/e3/3b/04/e33b0474a5f1d96bf2e2da850fad24b5.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 75
+    },
+    {
+      "name": "Ookami-san to Shichinin no Nakama-tachi",
+      "genre": "Comedy, Parody, Romance",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/91/32/18/91321894f4273c5373a2a086fa64688f.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 76
+    },
+    {
+      "name": "Kore wa Zombie Desu ka?",
+      "genre": "Action, Comedy, Ecchi, Harem, School, Supernatural, Vampire, Magic",
+      "studio": "Studio Deen",
+      "imageUrl": "https://i.pinimg.com/564x/7c/8c/43/7c8c43ed75369f93c1061bbc400815cb.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 77
+    },
+    {
+      "name": "Beelzebub",
+      "genre": "Action, Comedy, School, Shounen, Super Power, Supernatural, Demons",
+      "studio": "Pierrot Plus",
+      "imageUrl": "https://i.pinimg.com/564x/45/01/33/450133b76edb35ce71c6124574bc95fb.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 78
+    },
+    {
+      "name": "Ao no Exorcist",
+      "genre": "Action, Fantasy, School, Shounen, Super Power, Supernatural, Demons",
+      "studio": "A-1 Pictures",
+      "imageUrl": "https://i.pinimg.com/736x/6c/e0/f4/6ce0f4ca3a80aed17c08c191de8d5f01.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 79
+    },
+    {
+      "name": "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+      "genre": "Drama, Romance, Slice of Life, Supernatural",
+      "studio": "A-1 Pictures",
+      "imageUrl": "https://i.pinimg.com/564x/4b/1a/da/4b1ada5a5970e10bab1a917da62876ad.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 80
+    },
+    {
+      "name": "Deadman Wonderland",
+      "genre": "Action, Horror, Sci-Fi, Shounen, Super Power, Supernatural",
+      "studio": "Manglobe",
+      "imageUrl": "https://i.pinimg.com/564x/4f/f4/5b/4ff45b5ed8560e163720adfddaf76727.jpg",
+      "status": "completed",
+      "score": 1,
+      "id": 81
+    },
+    {
+      "name": "Guilty Crown",
+      "genre": "Action, Drama, Mecha, Psychological, Romance, Sci-Fi, Super Power",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/46/6b/2b/466b2b811424c0fa3fd001699c904af2.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 82
+    },
+    {
+      "name": "Ben-To",
+      "genre": "Action, Comedy, Ecchi, Martial Arts, Parody, School, Gourmet",
+      "studio": "David Production",
+      "imageUrl": "https://i.pinimg.com/564x/07/b8/54/07b8548abe08432e6ca5058949ccdb1c.jpg",
+      "status": "completed",
+      "score": 0,
+      "id": 83
+    },
+    {
+      "name": "Another",
+      "genre": "Horror, Mystery, Psychological, School, Supernatural, Thriller",
+      "studio": "P.A. Works",
+      "imageUrl": "https://i.pinimg.com/564x/76/4c/dd/764cdda86514339abe92dea10a98a540.jpg",
+      "status": "completed",
+      "score": 2,
+      "id": 84
+    },
+    {
+      "name": "Kuroko no Basket",
+      "genre": "Comedy, School, Shounen, Sports, Super Power",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/c1/17/99/c11799f120933b30a215cbfb84c1221c.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 85
+    },
+    {
+      "name": "Sankarea",
+      "genre": "Comedy, Ecchi, Horror, Romance, School, Shounen, Supernatural",
+      "studio": "Studio Deen",
+      "imageUrl": "https://i.pinimg.com/564x/0d/9f/d8/0d9fd855be5a73162cf7e40b82b295c6.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 86
+    },
+    {
+      "name": "Fate/stay night: Unlimited Blade Works",
+      "genre": "Action, Fantasy, School, Super Power, Supernatural, Magic",
+      "studio": "ufotable",
+      "imageUrl": "https://i.pinimg.com/564x/ad/d9/0b/add90b0aea307fb2bee6dd8e18fe7686.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 87
+    },
+    {
+      "name": "Acchi Kocchi (TV)",
+      "genre": "Comedy, Romance, School, Seinen, Slice of Life, Iyashikei",
+      "studio": "AIC",
+      "imageUrl": "https://i.pinimg.com/564x/1f/27/b6/1f27b6dba23b800639a72c0e52be9723.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 88
+    },
+    {
+      "name": "BEASTARS",
+      "genre": "Drama, Mystery, Psychological, Romance, School, Shounen, Slice of Life",
+      "studio": "Orange",
+      "imageUrl": "https://i.pinimg.com/564x/00/93/ff/0093ffe6e9a7bf07d3934fee9c3a3bb3.jpg",
+      "status": "paused",
+      "score": 0,
+      "id": 89
+    },
+    {
+      "name": "Noragami",
+      "genre": "Action, Adventure, Comedy, Fantasy, Shounen, Supernatural",
+      "studio": "Bones",
+      "imageUrl": "https://i.pinimg.com/564x/38/72/5a/38725ad76e8cf93ac691467c135b812a.jpg",
+      "status": "completed",
+      "score": 5,
+      "id": 90
+    },
+    {
+      "name": "Nisekoi",
+      "genre": "Comedy, Harem, Romance, School, Shounen, Slice of Life",
+      "studio": "Shaft",
+      "imageUrl": "https://i.pinimg.com/564x/a3/ab/4a/a3ab4afd0c7dcbd0a295b1ef04171dba.jpg",
+      "status": "completed",
+      "score": 0,
+      "id": 91
+    },
+    {
+      "name": "Chuunibyou Demo Koi ga Shitai!",
+      "genre": "Comedy, Drama, Parody, Romance, School, Slice of Life",
+      "studio": "Kyoto Animation",
+      "imageUrl": "https://i.pinimg.com/564x/42/4e/9e/424e9e9d6656cb23e7090b8e2074f83d.jpg",
+      "status": "completed",
+      "score": 3,
+      "id": 92
+    },
+    {
+      "name": "Witch Craft Works",
+      "genre": "Action, Fantasy, School, Seinen, Supernatural, Magic",
+      "studio": "J.C.Staff",
+      "imageUrl": "https://i.pinimg.com/564x/db/2c/3e/db2c3e35613f4418745a47c46a5152b5.jpg",
+      "status": "completed",
+      "score": 4,
+      "id": 93
+    },
+    {
+      "name": "Platinum End",
+      "genre": "Drama, Mystery, Psychological, Romance, Shounen, Super Power, Supernatural, Suspense",
+      "studio": "Signal.MD",
+      "imageUrl": "https://i.pinimg.com/564x/32/b7/cc/32b7cc90534673843975d9edc4c044f9.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 94
+    },
+    {
+      "name": "Ragna Crimson",
+      "genre": " Action, Adventure, Fantasy, Mystery, Shounen, Magic ",
+      "studio": "Silver Link.",
+      "imageUrl": "https://i.pinimg.com/736x/b9/a7/2c/b9a72c48168f2697d407f118aebfa149.jpg",
+      "status": "watching",
+      "score": "unscored",
+      "id": 95
+    },
+    {
+      "name": "Dr. STONE",
+      "genre": " Action, Adventure, Comedy, Sci-Fi, Shounen ",
+      "studio": "TMS Entertainment",
+      "imageUrl": "https://i.pinimg.com/736x/26/c8/e9/26c8e99cc4e845b88c5798d386c7b066.jpg",
+      "status": "watching",
+      "score": "5",
+      "id": 96
+    },
+    {
+      "name": "Tengoku Daimakyo",
+      "genre": " Adventure, Mystery, Sci-Fi, Seinen, Super Power, Thriller, Demons ",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/25/83/9a/25839aef8d7fc6d97bd3c78556c3de1f.jpg",
+      "status": "paused",
+      "score": "3",
+      "id": 97
+    },
+    {
+      "name": "Enn Enn no Shouboutai Ni no Shou",
+      "genre": " Action, Drama, Fantasy, Military, Sci-Fi, Shounen, Super Power, Supernatural, Demons ",
+      "studio": "David Production",
+      "imageUrl": "https://i.pinimg.com/564x/74/a6/4b/74a64bae5c11fbe3c9168ea4a71615c4.jpg",
+      "status": "completed",
+      "score": "4",
+      "id": 98
+    },
+    {
+      "name": "Haikyuu!!",
+      "genre": "Comedy, Drama, School, Shounen, Sports ",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/df/28/16/df28166247a74fe405ff86e182eec30f.jpg",
+      "status": "completed",
+      "score": "5",
+      "id": 99
+    },
+    {
+      "name": "Noblesse: Awakening",
+      "genre": " Action, School, Super Power, Supernatural, Vampire ",
+      "studio": "Production I.G",
+      "imageUrl": "https://i.pinimg.com/564x/7e/df/8a/7edf8ad246dec9387352ea9688a0a89b.jpg",
+      "status": "completed",
+      "score": "5",
+      "id": 100
+    },
+    {
+      "name": "Shakunetsu Kabaddi",
+      "genre": "Action, Comedy, Drama, School, Shounen, Sports",
+      "studio": "TMS Entertainment",
+      "imageUrl": "https://i.pinimg.com/564x/c2/27/44/c227444a8a7cccadf6eb4effb7a82cbe.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 101
+    },
+    {
+      "name": "GTO: Great Teacher Onizuka",
+      "genre": " Comedy, Drama, Martial Arts, Parody, School, Shounen, Slice of Life ",
+      "studio": "Pierrot",
+      "imageUrl": "https://i.pinimg.com/564x/1f/d0/76/1fd0760418c5aa53a44d9bc162cdeb9c.jpg",
+      "status": "completed",
+      "score": "5",
+      "id": 102
+    },
+    {
+      "name": "Dumbbell Nan Kilo Moteru?",
+      "genre": " Comedy, Ecchi, Parody, School, Shounen, Slice of Life, Sports ",
+      "studio": " Doga Kobo ",
+      "imageUrl": "https://i.pinimg.com/564x/68/46/d5/6846d57ebffc8e4eb7fdd8b0ec834de0.jpg",
+      "status": "completed",
+      "score": "4",
+      "id": 103
+    },
+    {
+      "name": "The God of High School",
+      "genre": "Action, Comedy, Fantasy, Martial Arts, Shounen, Super Power, Supernatural ",
+      "studio": "MAPPA",
+      "imageUrl": "https://i.pinimg.com/736x/59/74/bf/5974bfba385b57ae09aff7a376a2d38c.jpg",
+      "status": "completed",
+      "score": 0,
+      "id": 104
+    },
+    {
+      "name": "Tomodachi game",
+      "genre": "Drama, Mystery, Psychological, Shounen, Thriller, Suspense ",
+      "studio": "Okuruto Noboru",
+      "imageUrl": "https://i.pinimg.com/564x/97/e6/38/97e63865785501c26615c7bd78e7135b.jpg",
+      "status": "completed",
+      "score": "4",
+      "id": 105
+    },
+    {
+      "name": "Xian Wang De Ri Chang Sheng Huo",
+      "genre": " Action, Adventure, Comedy, Fantasy, Parody, School, Slice of Life, Super Power, Magic ",
+      "studio": "Haoliners Animation League",
+      "imageUrl": "https://i.pinimg.com/564x/05/77/c9/0577c98a4417f992eb6567fd6b66c5d9.jpg",
+      "status": "completed",
+      "score": "4",
+      "id": 106
+    },
+    {
+      "name": "Bakemono no Ko",
+      "genre": " Action, Adventure, Comedy, Drama, Fantasy, Martial Arts, Supernatural, Isekai ",
+      "studio": "Studio Chizu",
+      "imageUrl": "https://i.pinimg.com/564x/3a/a7/9a/3aa79aaa7358d39e542421e95a56f7de.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 107
+    },
+    {
+      "name": "Rosario to Vampire",
+      "genre": "Comedy, Ecchi, Fantasy, Harem, Romance, School, Shounen, Vampire ",
+      "studio": "Gonzo",
+      "imageUrl": "https://i.pinimg.com/564x/53/7c/b6/537cb62667175da66f7561ee1d3ec338.jpg",
+      "status": "completed",
+      "score": "1",
+      "id": 108
+    },
+    {
+      "name": "Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?",
+      "genre": "Action, Comedy, Fantasy, Super Power, Supernatural, Vampire, Isekai, Demons ",
+      "studio": " Diomedea",
+      "imageUrl": "https://i.pinimg.com/564x/14/7d/89/147d8943909197ef692eaafcec50641b.jpg",
+      "status": "completed",
+      "score": "4",
+      "id": 109
+    },
+    {
+      "name": "Quan Zhi Gao Shou",
+      "genre": "Action, Comedy",
+      "studio": "Colored Pencil Animation",
+      "imageUrl": "https://i.pinimg.com/564x/52/21/1a/52211aae190a25598bc2e07baec31a0f.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 110
+    },
+    {
+      "name": "Sakasama no Patema",
+      "genre": "Adventure, Romance, School, Sci-Fi",
+      "studio": "Studio Rikka",
+      "imageUrl": "https://i.pinimg.com/564x/5f/11/93/5f1193c36a322721031ac5543ee6395e.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 111
+    },
+    {
+      "name": "Plunderer",
+      "genre": "Action, Adventure, Comedy, Drama, Ecchi, Fantasy, Military, Romance, School, Shounen, Isekai, Magic",
+      "studio": "GEEK TOYS",
+      "imageUrl": "https://i.pinimg.com/564x/8d/73/b9/8d73b944ba17aaaf8c71add88b15fc2a.jpg",
+      "status": "completed",
+      "score": 0,
+      "id": 112
+    },
+    {
+      "name": "Renai Boukun",
+      "genre": "Comedy, Ecchi, Harem, Parody, Romance, School, Shounen, Supernatural",
+      "studio": "EMT Squared",
+      "imageUrl": "https://i.pinimg.com/564x/d4/f7/75/d4f77504b002d4f1723f78529bbe20e3.jpg",
+      "status": "completed",
+      "score": "3",
+      "id": 113
+    },
+    {
+      "name": "Migi&Dali",
+      "genre": "Comedy, Drama, Mystery, School, Seinen, Slice of Life, Suspense",
+      "studio": "GEEK TOYS",
+      "imageUrl": "https://i.pinimg.com/564x/6e/b5/0a/6eb50a4866a777a74c992799de0854e6.jpg",
+      "status": "watching",
+      "score": "1",
+      "id": 114
+    },
+    {
+      "name": "Aishen Qiaokeli-ing",
+      "genre": "Comedy, Ecchi, Harem, Romance, School, Magic",
+      "studio": "B.CMAY PICTURES",
+      "imageUrl": "https://i.pinimg.com/736x/31/1f/99/311f999de350b57ced07bf2fb7cb756a.jpg",
+      "coverImageUrl": "",
+      "status": "completed",
+      "score": "3",
+      "id": 115
+    },
+    {
+      "name": "Amagi Brilliant Park",
+      "genre": "Comedy, Fantasy, Parody, Magic",
+      "studio": "Mobcast",
+      "imageUrl": "https://i.pinimg.com/564x/4c/ed/70/4ced70bf6a04c6d8b60672230b82eb6f.jpg",
+      "coverImageUrl": "",
+      "status": "completed",
+      "score": "4",
+      "id": 116
+    },
+    {
+      "name": "Kyoukai no Kanata",
+      "genre": " Action, Drama, Fantasy, School, Slice of Life, Super Power, Supernatural, Demons, Magic",
+      "studio": "Kyoto Animation",
+      "imageUrl": "https://i.pinimg.com/564x/71/03/76/710376d9bd2082b5812407e86f7c2f4b.jpg",
+      "coverImageUrl": "",
+      "status": "completed",
+      "score": 0,
+      "id": 117
+    },
+    {
+      "name": "Gokukoku no Brynhildr",
+      "genre": "Drama, Fantasy, Harem, Mystery, School, Sci-Fi, Seinen, Super Power, Magic",
+      "studio": "Arms",
+      "imageUrl": "https://i.pinimg.com/564x/6c/41/eb/6c41ebd85775fa20f4fc900aeb27da21.jpg",
+      "coverImageUrl": "",
+      "status": "completed",
+      "score": "4",
+      "id": 118
+    },
+    {
+      "name": "Shinchou Yuusha: Kono Yuusha ga Ore TUEEE Kuse ni Shinchou Sugiru",
+      "genre": "Action, Adventure, Comedy, Fantasy, Parody, Isekai, Demons, Magic",
+      "studio": "Kadokawa",
+      "imageUrl": "https://i.pinimg.com/564x/1f/80/12/1f8012e549a14b1e2f705ecaa46afa43.jpg",
+      "coverImageUrl": "",
+      "status": "completed",
+      "score": "5",
+      "id": 119
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import FolderIcon from "@mui/icons-material/Folder";
 import GroupsIcon from "@mui/icons-material/Groups";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from '@mui/icons-material/Person';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { SidebarContext } from "../../context/SidebarContext";
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
@@ -39,12 +40,17 @@ const Sidebar = () => {
       icon: EmailIcon,
       route: '/email'
     },
+    {
+      title: "Anime",
+      icon: SmartToyIcon,
+      route: '/anime'
+    },
   ];
 
   return (
     <Box
       sx={{
-        width: sidebarToggle ? "70px" : "250px",
+        width: sidebarToggle ? "70px" : "225px",
         height: "100%",
         bgcolor: "primary.main",
         transition: "width 0.3s ease-in-out",
@@ -60,7 +66,7 @@ const Sidebar = () => {
         }}
       >
         <Button>
-          <Avatar sx={{ width: 44, height: 44 }}>.f</Avatar>
+          <Avatar sx={{ width: 40, height: 40 }}>.f</Avatar>
         </Button>
         {
           !sidebarToggle && <Box
@@ -71,11 +77,11 @@ const Sidebar = () => {
             fontFamily: theme.typography.fontFamily
           }}
         >
-          <Typography variant="h4" sx={{ color: "white", fontWeight: "600" }}>
+          <Typography variant="h5" sx={{ color: "white", fontWeight: "500" }}>
             .fillow
           </Typography>
           <Typography
-            sx={{ color: "white", fontWeight: "600", fontSize: "10px" }}
+            sx={{ color: "white", fontWeight: "500", fontSize: "10px" }}
           >
             Rizen Admin Dashboard
           </Typography>

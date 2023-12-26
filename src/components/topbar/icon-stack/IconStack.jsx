@@ -9,7 +9,7 @@ import EventIcon from "@mui/icons-material/Event";
 
 const IconStack = () => {
   return (
-    <Stack direction="row">
+    <Stack direction="row" spacing={-2}>
       <Icon icon={StarIcon} badgeContent={1} color="info" />
       <Icon icon={NotificationsIcon} badgeContent={1} color="warning" />
       <Icon icon={EmailIcon} badgeContent={1} color="success" />

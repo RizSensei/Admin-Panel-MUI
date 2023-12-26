@@ -23,7 +23,7 @@ const UpdateTeam = ({id, teams}) => {
   return (
     <div>
       <IconButton onClick={handleOpen}>
-        <EditIcon sx={{ color: "purple" }} />
+        <EditIcon sx={{ color: "purple", width: 18, height: 18 }} />
       </IconButton>
       <Modal
         open={open}

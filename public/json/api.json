@@ -18,7 +18,7 @@
         "Jane Smith",
         "Bob Johnson"
       ],
-      "budget": 50000,
+      "budget": 45000,
       "image": "https://i.pinimg.com/564x/be/42/08/be42084cb85b82902734d2672bfd0974.jpg"
     },
     {
@@ -74,7 +74,7 @@
         "Henry Blue",
         "Ivy Purple"
       ],
-      "budget": 80000,
+      "budget": 30000,
       "image": "https://i.pinimg.com/564x/7a/28/f9/7a28f91a34529c902213e9d4fce87485.jpg"
     },
     {
@@ -102,7 +102,7 @@
         "Quincy Silver",
         "Rose Gold"
       ],
-      "budget": 70000,
+      "budget": 130000,
       "image": "https://i.pinimg.com/564x/d4/c0/df/d4c0df55f7d4da93cf322d5a8f767355.jpg"
     },
     {

@@ -30,7 +30,7 @@ const DeleteTeammateButton = ({ id, name }) => {
 
   return (
     <IconButton onClick={deleteTeam}>
-      <DeleteIcon sx={{ color: "red" }} />
+      <DeleteIcon sx={{ color: "red", width: 18, height: 18  }} />
     </IconButton>
   );
 };

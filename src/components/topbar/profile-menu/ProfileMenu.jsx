@@ -37,7 +37,7 @@ const ProfileMenu = () => {
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
             >
-              <Avatar sx={{ width: 36, height: 36 }}>R</Avatar>
+              <Avatar sx={{ width: 32, height: 32 }}>R</Avatar>
             </IconButton>
         </Box>
         <Menu

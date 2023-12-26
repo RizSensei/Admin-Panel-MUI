@@ -23,15 +23,16 @@ const Search = ({ onSearch }) => {
   return (
     <FormControl>
       <TextField
-        size="small"
+       size="small"
         variant="outlined"
         value={searchedItem}
         placeholder="Search..."
         onChange={handleChange}
+        sx={{fontSize:'10px'}}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <SearchIcon />
+              <SearchIcon/>
             </InputAdornment>
           ),
           endAdornment: (

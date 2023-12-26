@@ -17,7 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <SidebarProvider>
-        {/* <PageTitleProvider> */}
           <DarkModeProvider>
             <ThemeProvider theme={theme}>
               <QueryClientProvider client={queryClient}>
@@ -25,7 +24,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               </QueryClientProvider>
             </ThemeProvider>
           </DarkModeProvider>
-        {/* </PageTitleProvider> */}
       </SidebarProvider>
     </Provider>
   </React.StrictMode>

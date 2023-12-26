@@ -21,7 +21,7 @@ const Topbar = () => {
         bgcolor: "var(--bg-navbar)",
         color: "var(--text-primary)",
         px: 3,
-        borderBottom: "1px solid gray",
+        boxShadow: [0, 3],
       }}
       className={`App ${dashtheme}`}
     >
@@ -29,24 +29,23 @@ const Topbar = () => {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          py: 0.5,
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Button onClick={() => toggleSidebar()}>
             {sidebarToggle ? (
-              <ArrowForwardIcon fontSize="large" />
+              <ArrowForwardIcon fontSize="small" />
             ) : (
-              <MenuIcon fontSize="large" />
+              <MenuIcon fontSize="small" />
             )}
           </Button>
-          <Typography sx={{ fontSize: "20px" }}>
+          <Typography sx={{ fontSize: "18px" }}>
             <Link to="/"  style={{ textDecoration: 'none', color:'inherit' }}>Home</Link>
           </Typography>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <SearchAutoComplete />
-          <Switch onChange={() => toggleTheme()} />
+          {/* <SearchAutoComplete /> */}
+          <Switch size="small" onChange={() => toggleTheme()} />
           <IconStack />
           <Button>
             <ProfileMenu />

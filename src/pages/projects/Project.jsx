@@ -16,11 +16,8 @@ import PageTitle from "../../components/pageTitle/PageTitle";
 import ExportExcel from "../../export/ExportExcel";
 
 const Project = () => {
-  const status = ["All", "Completed", "Planned", "In Progress"];
-  const budget = ["<50K", "50K-100K", ">100K"];
-
-  // const [projectStatus, setProjectStatus] = useState("");
-  // const [projectBudget, setProjectBudget] = useState("");
+  const status = ["Completed", "Planned", "In Progress"];
+  const budget = ["<50K", "50K-100K", "100K>"];
 
   /** useReducer */
   const initialState = {
@@ -42,6 +39,8 @@ const Project = () => {
   };
 
   const [state, dispatch] = useReducer(projectReducer, initialState);
+
+  // console.log(state.projectBudget)
 
   const handleProjectStatusChange = useCallback((value) => {
     dispatch({ type: "SET_STATUS", payload: value });
@@ -85,23 +84,31 @@ const Project = () => {
     if (state.projectStatus === "" && state.projectBudget === "") {
       return projects;
     }
-
-    if (state.projectStatus === "All") {
-      return projects;
-    }
-
-    if (state.projectStatus !== "") {
+    else if (state.projectStatus !== "" && state.projectBudget === "") {
       filteredProjects = filteredProjects.filter(
         (project) => project.status === state.projectStatus
       );
+      return filteredProjects;
     }
-    if (state.projectBudget !== "") {
-      filteredProjects = filteredProjects.filter(
-        (project) => project.budget === state.projectBudget
-      );
+    else if (state.projectStatus === "" && state.projectBudget !== "") {
+      switch (state.projectBudget) {
+        case "<50K":
+          filteredProjects = filteredProjects.filter(
+            (project) => project.budget < 50000
+          );
+          return filteredProjects;
+        case "50K-100K":
+          filteredProjects = filteredProjects.filter(
+            (project) => project.budget >= 50000 && project.budget <= 100000
+          );
+          return filteredProjects;
+        case "100K>":
+          filteredProjects = filteredProjects.filter(
+            (project) => project.budget > 100000
+          );
+          return filteredProjects;
+      }
     }
-
-    return filteredProjects;
   }, [projects, state.projectStatus, state.projectBudget]);
 
   const filterProjects = () => {

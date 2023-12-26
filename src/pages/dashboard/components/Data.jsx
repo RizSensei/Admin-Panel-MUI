@@ -1,183 +1,26 @@
-import { Box, Grid, Typography } from "@mui/material";
-import React from "react";
-import LinearProgress from "@mui/material/LinearProgress";
+import EmailIcon from "@mui/icons-material/Email";
 import FolderIcon from "@mui/icons-material/Folder";
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
-import EmailIcon from "@mui/icons-material/Email";
-import theme from "../../../theme/theme";
-import { Link } from "react-router-dom";
+import { Box, Grid } from "@mui/material";
+import React from "react";
+import DashboardDataLayout from "../../../components/dashboardDataLayout/DashboardDataLayout";
 
 const Data = () => {
   return (
     <Box sx={{ width: "100%" }}>
       <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
-          <Box
-            sx={{
-              backgroundColor: "#17a2b8",
-              color: "white",
-              borderRadius: "5px",
-              columnGap: 2,
-              boxShadow: 2,
-            }}
-          >
-            <Box sx={{ display: "flex", alignItems: "center",justifyContent:'space-around', px: 4, pt: 4 }}>
-              <Box>
-                <Typography sx={{ fontSize: "20px" }}>Total Clients</Typography>
-                <Typography variant="h5" fontWeight={500}>
-                  68
-                </Typography>
-              </Box>
-              <Box>
-                <PersonIcon
-                  sx={{ height: "75px", width: "75px", color: "white" }}
-                />
-              </Box>
-            </Box>
-            <Link
-              to="/clients"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <Box
-                sx={{
-                  pt: 2,
-                  backgroundColor: "#1591a5",
-                  display: "flex",
-                  justifyContent: "center",
-                  pb: 1,
-                }}
-              >
-                <Typography sx={{ "&:hover": { scale: "1.1" } }}>
-                  More info
-                </Typography>
-              </Box>
-            </Link>
-          </Box>
+          <DashboardDataLayout title="Total Clients" value={68} link="/clients" upperCardColor="#17a2b8" lowerCardColor="#1591a5" icon={PersonIcon}/>
         </Grid>
         <Grid item xs={6}>
-          <Box
-            sx={{
-              backgroundColor: "rgb(255,193,7)",
-              color: "white",
-              borderRadius: "5px",
-              columnGap: 2,
-              boxShadow: 2,
-            }}
-          >
-            <Box sx={{ display: "flex", alignItems: "center",justifyContent:'space-around', px: 4, pt: 4 }}>
-              <Box>
-                <Typography sx={{ fontSize: "20px" }}>Total Emails</Typography>
-                <Typography variant="h5" fontWeight={500}>
-                  68
-                </Typography>
-              </Box>
-              <Box>
-                <EmailIcon
-                  sx={{ height: "75px", width: "75px", color: "white" }}
-                />
-              </Box>
-            </Box>
-            <Link
-              to="/email"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <Box
-                sx={{
-                  pt: 2,
-                  backgroundColor: "rgb(229,173,6)",
-                  display: "flex",
-                  justifyContent: "center",
-                  pb: 1,
-                }}
-              >
-                <Typography sx={{ "&:hover": { scale: "1.1" } }}>
-                  More info
-                </Typography>
-              </Box>
-            </Link>
-          </Box>
+          <DashboardDataLayout title="Total Emails" value={68} link="/email" upperCardColor="rgb(255,193,7)" lowerCardColor="rgb(229,173,6)" icon={EmailIcon}/>
         </Grid>
         <Grid item xs={6}>
-          <Box
-            sx={{
-              backgroundColor: "#28a745",
-              color: "white",
-              borderRadius: "5px",
-              columnGap: 2,
-              boxShadow: 2,
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent:'space-around',
-                px: 4, pt:4
-              }}
-            >
-              <Box>
-                <Typography variant="h5" fontWeight={500}>
-                  20
-                </Typography>
-                <Typography sx={{ fontSize: "20px" }}>Total Members</Typography>
-              </Box>
-              <Box>
-                <GroupsIcon
-                  sx={{ height: "75px", width: "75px", color: "white" }}
-                />
-              </Box>
-            </Box>
-            <Link to="/team" style={{textDecoration:'none', color:'white'}}>
-              <Box sx={{ pt: 2, backgroundColor:'#24963e', display:'flex', justifyContent:'center', pb:1 }}>
-                <Typography sx={{'&:hover':{scale: '1.1'}}}>More info</Typography>
-              </Box>
-            </Link>
-          </Box>
+          <DashboardDataLayout title="Total Members" value={68} link="/team" upperCardColor="#28a745" lowerCardColor="#24963e" icon={GroupsIcon}/>
         </Grid>
         <Grid item xs={6}>
-          <Box
-            sx={{
-              backgroundColor: "#dc3545",
-              color: "white",
-              borderRadius: "5px",
-              columnGap: 2,
-              boxShadow: 2,
-            }}
-          >
-            <Box sx={{ display: "flex",
-              alignItems: "center", justifyContent:'space-around',px:4,pt:4}}>
-              <Box>
-              <Typography variant="h5" fontWeight={500}>
-                15
-              </Typography>
-              <Typography sx={{ fontSize: "20px" }}>Total Projects</Typography>
-            </Box>
-            <Box>
-              <FolderIcon
-                sx={{ height: "75px", width: "75px", color: "white" }}
-              />
-            </Box>
-            </Box>
-            <Link
-              to="/projects"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <Box
-                sx={{
-                  pt: 2,
-                  backgroundColor: "#c6303e",
-                  display: "flex",
-                  justifyContent: "center",
-                  pb: 1,
-                }}
-              >
-                <Typography sx={{ "&:hover": { scale: "1.1" } }}>
-                  More info
-                </Typography>
-              </Box>
-            </Link>
-          </Box>
+          <DashboardDataLayout title="Total Projects" value={68} link="/projects" upperCardColor="#dc3545" lowerCardColor="#c6303e" icon={FolderIcon}/>
         </Grid>
       </Grid>
     </Box>

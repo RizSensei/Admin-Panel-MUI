@@ -12,7 +12,6 @@ const ProjectStatistics = () => {
   } = useQuery(["projectsRepo"], () =>
     axios.get("http://localhost:3000/projects").then((res) => res.data)
   );
-  // console.log(Projects)
 
   const [status, setStatus] = useState({
     completed: 0,
@@ -43,30 +42,33 @@ const ProjectStatistics = () => {
     chart: {
       type: "donut",
     },
-    labels: [`Completed`, `Planned`, `In Progress`],
-    dataLabels:{
-        enabled:false
-    },
+    labels: [`Completed(${status.completed})`, `Planned(${status.planned})`, `In Progress(${status.inProgress})`],
     legend: {
-      position: "right",
-      display:'flex'
+      position: "bottom",
+      fontSize:'13px'
     },
-    innerRadius:'20%',
     colors: ["#ef4444", "#a855f7", "#10b981"],
+    plotOptions:{
+      pie:{
+        donut:{
+          size:'60%'
+        }
+      }
+    }
   };
 
   const series = [status.completed, status.planned, status.inProgress];
 
   return (
-    <Box component={Paper} sx={{ p: 2, backgroundColor:'#e2e8f0', boxShadow:2 }}>
-      <Typography variant="h5" sx={{ fontWeight: "600" }}>
+    <Box component={Paper} sx={{ p: 2, boxShadow:2 }}>
+      <Typography variant="h5" sx={{ fontWeight: "500", mb:4 }}>
         Project Statistics
       </Typography>
       <ReactApexChart
         options={options}
         series={series}
         type="donut"
-        height={200}
+        height={300}
       />
     </Box>
   );

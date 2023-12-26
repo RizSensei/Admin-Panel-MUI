@@ -6,9 +6,9 @@ import Project from './pages/projects/Project';
 import Clients from './pages/clients/Clients';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import EmailPage from './pages/Email/EmailPage';
+import Anime from './pages/anime/Anime';
 
 function App() {
-
   return (
     <div>
       <BrowserRouter>
@@ -18,6 +18,7 @@ function App() {
           <Route path="/projects" element={<PrivateRoute><Project/></PrivateRoute>}/>
           <Route path="/clients" element={<PrivateRoute><Clients/></PrivateRoute>}/>
           <Route path="/email" element={<PrivateRoute><EmailPage/></PrivateRoute>}/>
+          <Route path="/anime" element={<PrivateRoute><Anime/></PrivateRoute>}/>
         </Routes>
       </BrowserRouter>
     </div>

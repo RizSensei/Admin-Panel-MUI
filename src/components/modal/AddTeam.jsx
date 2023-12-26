@@ -24,8 +24,8 @@ const AddTeam = () => {
   return (
     <div>
       <Button
-        variant="contained" onClick={handleOpen}
-        sx={{ fontSize: "15px", backgroundColor:'#2563eb'}}
+        variant="contained" onClick={handleOpen} size="small"
+        sx={{backgroundColor:'#2563eb'}}
       >
         + Add Employee
       </Button>

@@ -23,18 +23,19 @@ const SidebarButton = ({
       onClick={handleClick}
       type="button"
       variant="outlined"
-      startIcon={<IconComponent sx={{ fontWeight: "600", color: "gray" }} />}
+      startIcon={<IconComponent sx={{ fontWeight: "500", color: "gray" }} />}
       sx={{
         color: "white",
-        py: 2,
+        py: 1.5,
         pl: 3,
         width: "100%",
         display: "flex",
         justifyContent: "flex-start",
         "&:hover": { backgroundColor: "#334155" },
+        
       }}
     >
-      <Typography sx={{ fontWeight: "500", textTransform: "none" }}>
+      <Typography sx={{ fontWeight: "400", textTransform: "none", fontSize:'14px'}}>
         {!isTitleHidden && title}
       </Typography>
     </Button>

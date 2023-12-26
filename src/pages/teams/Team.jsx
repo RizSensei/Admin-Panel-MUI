@@ -165,7 +165,6 @@ const Team = () => {
         className={`App ${dashtheme}`}
       >
         <Box sx={{ display: "flex", columnGap: 2 }}>
-          {/* <AddTeam /> */}
           <Search items={items} onSearch={handleSearch} />
         </Box>
 

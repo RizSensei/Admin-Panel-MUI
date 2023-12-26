@@ -15,6 +15,7 @@ const ExportExcel = ({ excelData, filename }) => {
       <Tooltip title="Excel Export">
         <Button
           variant="contained"
+          size="small"
           sx={{ backgroundColor: "#28a745" }}
           onClick={(e) => exportToExcel(filename)}
         >

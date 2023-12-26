@@ -20,10 +20,10 @@ const Advertisement = () => {
                 rowGap: 2,
               }}
             >
-              <Typography variant="h4" fontWeight="600" color="white">
+              <Typography variant="h5" fontWeight="500" color="white">
                 Manage your project in one touch
               </Typography>
-              <Typography color="white">
+              <Typography color="white" variant="body1">
                 Let Fillow manage your project automatically with our best AI
                 systems
               </Typography>
@@ -37,7 +37,7 @@ const Advertisement = () => {
               </Box>
             </Box>
             <Box sx={{ width: "50%", display:'flex', alignItems:'center', justifyContent:'center' }}>
-              <img src="./images/dashboard.png" alt="Broken" height={300} width={300} style={{objectFit:'cover'}}/>
+              <img src="./images/dashboard.png" alt="Broken" height={250} width={250} style={{objectFit:'cover'}}/>
             </Box>
           </Box>
   )

@@ -55,7 +55,7 @@ const DisplayEmailData = ({ emails, isLoading, error }) => {
             <CardContent>
               <Typography
                 gutterBottom
-                variant="h5"
+                variant="h6"
                 component="div"
                 sx={{ fontWeight: "500" }}
               >
@@ -66,17 +66,17 @@ const DisplayEmailData = ({ emails, isLoading, error }) => {
                 size="small"
                 sx={{
                   backgroundColor: "white",
-                  fontWeight: "600",
+                  fontWeight: "500",
                 }}
               />
-              <Typography variant="body2"  sx={{ mt: 1 }}>
+              <Typography variant="subtitle2">
                 {email.content}
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActionArea>
             <CardContent>
-              <Typography>{email.sender}</Typography>
+              <Typography sx={{fontSize:"15px"}}>{email.sender}</Typography>
             </CardContent>
           </CardActionArea>
         </Card>
