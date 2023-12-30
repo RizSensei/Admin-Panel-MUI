@@ -9,6 +9,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from '@mui/icons-material/Person';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { SidebarContext } from "../../context/SidebarContext";
+import Grid3x3Icon from '@mui/icons-material/Grid3x3';
 import theme from "../../theme/theme";
 import { Link } from "react-router-dom";
 
@@ -44,6 +45,11 @@ const Sidebar = () => {
       title: "Anime",
       icon: SmartToyIcon,
       route: '/anime'
+    },
+    {
+      title: "Data Grid",
+      icon: Grid3x3Icon,
+      route: '/dataGrid'
     },
   ];
 

@@ -9,6 +9,7 @@ import { useQuery } from "react-query";
 import SelectMapping from "../../components/mapping/SelectMapping";
 import Search from "../../components/search/Search";
 import DisplayAnime from "./DisplayAnime";
+import AddAnime from "../../components/modal/AddAnime";
 
 const Anime = () => {
   const status = ["watching", "completed", "planned", "paused"];
@@ -19,7 +20,7 @@ const Anime = () => {
   const retrieveAnimes = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    const response = await axios.get("http://localhost:3001/animes");
+    const response = await axios.get("http://localhost:3000/animes");
     return response.data;
   };
 
@@ -44,7 +45,7 @@ const Anime = () => {
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <PageTitle title="Anime" />
         <Box sx={{ display: "flex", columnGap: 1 }}>
-          {/* <AddTeam /> */}
+          <AddAnime />
           <ExportExcel
             //   excelData={items}
             filename={"Anime_Report"}

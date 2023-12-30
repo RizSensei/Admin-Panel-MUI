@@ -74,11 +74,11 @@ const LoginAdmin = () => {
             <Box sx={{ display: "flex", columnGap:1, mb:2 }}>
               <Avatar
                 sx={{
-                  width: 60,
-                  height: 60,
+                  width: 50,
+                  height: 50,
                   backgroundColor: "purple",
                   fontWeight: "600",
-                  fontSize: "50px",
+                  fontSize: "40px",
                 }}
               >
                 f
@@ -124,6 +124,7 @@ const LoginAdmin = () => {
                     margin="normal"
                     required
                     fullWidth
+                    size="small"
                     id="username"
                     label="Username"
                     name="username"
@@ -136,6 +137,7 @@ const LoginAdmin = () => {
                     margin="normal"
                     required
                     fullWidth
+                    size="small"
                     name="password"
                     label="Password"
                     type="password"
@@ -145,7 +147,7 @@ const LoginAdmin = () => {
                     autoComplete="current-password"
                   />
                   <Button
-                  size="large"
+                  size="small"
                     type="submit"
                     fullWidth
                     variant="contained"
@@ -156,7 +158,9 @@ const LoginAdmin = () => {
                   <Grid container>
                     <Grid item xs>
                       <Link href="#" variant="body2">
-                        Forgot password?
+                        <Typography sx={{ fontSize:'13px' }}>
+                          Forgot password?
+                        </Typography>
                       </Link>
                     </Grid>
                   </Grid>

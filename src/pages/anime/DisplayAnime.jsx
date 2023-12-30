@@ -22,14 +22,14 @@ const DisplayAnime = ({ animes, isLoading, error, setItems }) => {
     <Grid container columns={{ xs: 4, sm: 8, md: 12 }} sx={{ mt: 2, rowGap: 1 }}>
       {animes.map((anime) => (
         <Grid xs={1} sm={2} md={1.5} key={anime.id}>
-          <Card sx={{ maxWidth: 150, position: "relative" }}>
+          <Card sx={{ maxWidth: 145, position: "relative" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="200"
+                height="205"
                 image={anime.imageUrl}
                 alt={anime.name}
-                sx={{ objectFit: "cover" }}
+                sx={{ objectFit: "fill" }}
               />
               <CardContent
                 sx={{
